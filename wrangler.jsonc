@@ -4,7 +4,7 @@
 // (build command: npm run build, output directory: dist).
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "opentaxmap",
+  "name": "opentaxmap-webiste",
   "compatibility_date": "2026-07-01",
   "main": "src/worker.js",
   "assets": {
