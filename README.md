@@ -91,8 +91,10 @@ The site is fully static, so both Cloudflare targets work. Workers is the
 default here because the first-party analytics proxy (below) needs a small
 Worker script; on Pages the same can be done with a Pages Function.
 
-- **Workers** (configured in `wrangler.jsonc`, uses `src/worker.js`):
-  `npm run build && npx wrangler deploy`
+- **Workers** (configured in `wrangler.jsonc`, uses `src/worker.js`). Deployed
+  by Cloudflare Workers Builds, which pulls this repository and builds on push
+  to `main`; no deploy credentials are stored in GitHub. Manual deploy:
+  `npm run build && npx wrangler deploy`. Requires Node 22 (see `.nvmrc`).
 - **Pages**: build command `npm run build`, output directory `dist`. Without a
   Function, drop the analytics proxy and use Cloudflare's automatic Web
   Analytics injection instead.
