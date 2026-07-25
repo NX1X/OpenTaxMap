@@ -1,0 +1,26 @@
+OpenTaxMap
+Copyright 2026 NX1X (https://nx1xlab.dev)
+
+This product is licensed under the Apache License, Version 2.0.
+
+The application code is (c) 2026 NX1X.
+
+Data attribution
+----------------
+The tax-benefit locality data is derived from public Israeli government
+sources and is not covered by the copyright above:
+
+- Israel Tax Authority - annual income-tax deduction booklets
+  ("choveret nikuyim"), the eligible-locality lists. Public government
+  material.
+- Israel Central Bureau of Statistics (CBS / Lamas) - locality registry
+  (names, codes, districts, population, coordinates).
+
+Basemap tiles and geodata are (c) their respective providers:
+- OpenStreetMap contributors (https://www.openstreetmap.org/copyright)
+- Israel Hiking Map / Amud Anan (https://israelhiking.osm.org.il)
+- CARTO (https://carto.com/attributions)
+
+OpenTaxMap is an independent reference tool. It is not affiliated with,
+endorsed by, or an official product of any government body. The binding
+text is the Tax Authority's own publications.

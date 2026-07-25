@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: "Contact form / טופס יצירת קשר"
+    url: https://nx1xlab.dev/contact
+    about: "Prefer not to open an issue? Reach out directly / אפשר לפנות ישירות דרך הטופס"

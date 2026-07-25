@@ -1,0 +1,74 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Harden runner
+        uses: step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920 # v2.20.0
+        with:
+          egress-policy: audit
+
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+
+      - name: Setup Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install (locked, no scripts)
+        run: npm ci --ignore-scripts
+
+      - name: Build
+        run: npm run build
+
+      # The data pipeline shells out to `pdftotext` (poppler, native C++) against
+      # the PDFs in data-sources/. On a fork PR those PDFs are attacker-controlled,
+      # so this step is restricted to same-repo events. Fork PRs still get the full
+      # build above; the dataset diff is re-checked on push to main after merge.
+      - name: Setup Python
+        if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          python-version: "3.13"
+
+      - name: Check dataset is in sync with sources
+        if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+        run: |
+          # localities.json and sitemap.xml are generated; fail if a commit
+          # forgot to regenerate them after touching data/ or scripts/.
+          python3 -m pip install --quiet --require-hashes -r requirements.txt
+          sudo apt-get update && sudo apt-get install -y --no-install-recommends poppler-utils
+          # Record the parser version: a poppler bump can silently change
+          # `pdftotext -layout` output, which would shift extracted tax rates.
+          pdftotext -v
+          npm run data
+          if ! git diff --quiet -- public/data/localities.json public/sitemap.xml; then
+            echo "::error::public/data/localities.json or sitemap.xml is stale. Run 'npm run data' and commit."
+            git --no-pager diff --stat -- public/data/localities.json public/sitemap.xml
+            exit 1
+          fi
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: dist
+          path: dist
+          retention-days: 7

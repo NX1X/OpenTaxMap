@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>מפת היישובים המזכים בהטבת מס הכנסה | OpenTaxMap</title>
+    <meta name="description" content="כל היישובים המזכים בזיכוי ממס הכנסה לתושבי הפריפריה על מפה אחת: שיעורי הזיכוי, תקרות ההכנסה וההיסטוריה לשנים 2016-2026, עם חיפוש וסינון לפי אזור ומגזר." />
+    <link rel="canonical" href="https://taxmap.nx1xlab.dev/" />
+    <!-- Bilingual SPA: same URL serves he (default) and en (?lang=en) via client-side toggle. -->
+    <link rel="alternate" hreflang="he" href="https://taxmap.nx1xlab.dev/" />
+    <link rel="alternate" hreflang="en" href="https://taxmap.nx1xlab.dev/?lang=en" />
+    <link rel="alternate" hreflang="x-default" href="https://taxmap.nx1xlab.dev/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#184f95" />
+
+    <!-- OpenGraph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="OpenTaxMap" />
+    <meta property="og:title" content="מפת היישובים המזכים בהטבת מס הכנסה | OpenTaxMap" />
+    <meta property="og:description" content="כל היישובים המזכים בזיכוי ממס הכנסה לתושבי הפריפריה על מפה אחת: שיעורי הזיכוי, תקרות ההכנסה וההיסטוריה לשנים 2016-2026, עם חיפוש וסינון לפי אזור ומגזר." />
+    <meta property="og:url" content="https://taxmap.nx1xlab.dev/" />
+    <meta property="og:locale" content="he_IL" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:image" content="https://taxmap.nx1xlab.dev/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="OpenTaxMap - מפת היישובים המזכים בהטבת מס הכנסה" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="מפת היישובים המזכים בהטבת מס הכנסה | OpenTaxMap" />
+    <meta name="twitter:description" content="כל היישובים המזכים בזיכוי ממס הכנסה לתושבי הפריפריה על מפה אחת: שיעורי הזיכוי, תקרות ההכנסה וההיסטוריה לשנים 2016-2026, עם חיפוש וסינון לפי אזור ומגזר." />
+    <meta name="twitter:image" content="https://taxmap.nx1xlab.dev/og.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "name": "מפת היישובים המזכים בהטבת מס הכנסה",
+            "alternateName": "OpenTaxMap",
+            "url": "https://taxmap.nx1xlab.dev/",
+            "inLanguage": ["he", "en"]
+          },
+          {
+            "@type": "Dataset",
+            "name": "OpenTaxMap - Israeli periphery income-tax credit localities, 2016-2026",
+            "description": "Per-locality income-tax credit rates and annual income caps for localities eligible under Section 11 of the Israeli Income Tax Ordinance, tax years 2016-2026. Extracted from the Israel Tax Authority's official deduction booklets and joined with the Central Bureau of Statistics locality registry.",
+            "license": "https://www.apache.org/licenses/LICENSE-2.0",
+            "creator": {
+              "@type": "Person",
+              "name": "NX1X",
+              "url": "https://nx1xlab.dev"
+            },
+            "citation": [
+              "Israel Tax Authority - annual income-tax deduction booklets (חוברת ניכויים), 2016-2026",
+              "Israel Central Bureau of Statistics - locality registry (names, codes, districts, population, coordinates)"
+            ],
+            "temporalCoverage": "2016/2026",
+            "spatialCoverage": {
+              "@type": "Place",
+              "name": "Israel"
+            },
+            "distribution": {
+              "@type": "DataDownload",
+              "encodingFormat": "application/json",
+              "contentUrl": "https://taxmap.nx1xlab.dev/data/localities.json"
+            }
+          }
+        ]
+      }
+    </script>
+
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#map" data-i18n="skipToContent">דילוג לתוכן</a>
+    <a class="skip-link" href="#results-list" data-i18n="skipToList">דילוג לרשימת היישובים</a>
+
+    <header class="site-header">
+      <div class="header-title">
+        <h1 id="site-title" data-i18n="siteName">מפת היישובים המזכים בהטבת מס הכנסה</h1>
+        <p class="tagline" data-i18n="tagline"></p>
+      </div>
+      <div class="header-controls" role="group" aria-label="הגדרות תצוגה">
+        <a id="github-link" class="control-btn icon-btn" href="https://github.com/NX1X/OpenTaxMap" target="_blank" rel="noopener" data-i18n-arialabel="githubRepo">
+          <svg viewBox="0 0 16 16" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        </a>
+        <button id="share-btn" class="control-btn labeled-btn share-cta" type="button" data-i18n-arialabel="share" title=""><span aria-hidden="true">🔗</span> <span class="btn-label" data-i18n="share"></span></button>
+        <button id="stats-open" class="control-btn labeled-btn" type="button" data-i18n-arialabel="stats" title=""><span aria-hidden="true">📊</span> <span class="btn-label" data-i18n="stats"></span></button>
+        <button id="lang-toggle" class="control-btn" type="button" data-i18n="langToggle" data-i18n-arialabel="langToggleLabel"></button>
+        <button id="theme-toggle" class="control-btn" type="button" data-i18n-arialabel="themeToggle" aria-pressed="false">◐</button>
+        <button id="a11y-toggle" class="control-btn" type="button" data-i18n-arialabel="a11yMenu" aria-expanded="false" aria-controls="a11y-menu">♿</button>
+      </div>
+      <div id="a11y-menu" class="a11y-menu" hidden>
+        <fieldset>
+          <legend data-i18n="fontSize"></legend>
+          <div class="seg" role="group">
+            <button type="button" data-font="1" class="active" data-i18n="fontNormal"></button>
+            <button type="button" data-font="1.15" data-i18n="fontLarge"></button>
+            <button type="button" data-font="1.3" data-i18n="fontXLarge"></button>
+          </div>
+        </fieldset>
+        <label><input type="checkbox" id="opt-contrast" /> <span data-i18n="highContrast"></span></label>
+        <label><input type="checkbox" id="opt-motion" /> <span data-i18n="reduceMotion"></span></label>
+        <label><input type="checkbox" id="opt-underline" /> <span data-i18n="underlineLinks"></span></label>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="panel" aria-labelledby="filters-heading">
+        <h2 id="filters-heading" class="visually-hidden" data-i18n="filters"></h2>
+
+        <div class="field">
+          <label for="search" data-i18n="search"></label>
+          <div class="search-row">
+            <input id="search" type="search" autocomplete="off" data-i18n-placeholder="searchPlaceholder" />
+            <button id="nearest-btn" type="button" class="control-btn" data-i18n-arialabel="nearest" title="">📍</button>
+          </div>
+          <p id="nearest-status" role="status" aria-live="polite" class="nearest-status"></p>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="year" data-i18n="year"></label>
+            <select id="year"></select>
+          </div>
+          <div class="field">
+            <label for="sector" data-i18n="sector"></label>
+            <select id="sector">
+              <option value="" data-i18n="sectorAll"></option>
+              <option value="jewish" data-i18n="sectorJewish"></option>
+              <option value="arab" data-i18n="sectorArab"></option>
+              <option value="druze" data-i18n="sectorDruze"></option>
+              <option value="mixed" data-i18n="sectorMixed"></option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="district" data-i18n="district"></label>
+            <select id="district">
+              <option value="" data-i18n="districtAll"></option>
+              <option value="north" data-i18n="districtNorth"></option>
+              <option value="south" data-i18n="districtSouth"></option>
+              <option value="js" data-i18n="districtJs"></option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="subregion" data-i18n="subregion"></label>
+            <select id="subregion">
+              <option value="" data-i18n="subregionAll"></option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="council" data-i18n="council"></label>
+            <select id="council">
+              <option value="" data-i18n="councilAll"></option>
+            </select>
+          </div>
+        </div>
+
+        <fieldset class="legend-filter">
+          <legend data-i18n="legend"></legend>
+          <div id="legend-chips" class="legend-chips"></div>
+        </fieldset>
+
+        <label class="changes-toggle"><input type="checkbox" id="changes-mode" /> <span id="changes-mode-label"></span></label>
+
+        <div class="results-bar">
+          <p id="results-count" role="status" aria-live="polite"></p>
+          <button id="compare-open" type="button" class="link-btn" hidden></button>
+          <button id="clear-filters" type="button" class="reset-btn"><span aria-hidden="true">↺</span> <span data-i18n="clearFilters"></span></button>
+        </div>
+
+        <h2 class="visually-hidden" data-i18n="listHeading"></h2>
+        <ul id="results-list" class="results-list" tabindex="-1"></ul>
+        <div id="empty-state" class="empty-state" hidden>
+          <p class="empty-title" data-i18n="notInListTitle"></p>
+          <p data-i18n="notInListBody"></p>
+          <div class="empty-actions">
+            <button id="empty-clear" type="button" class="btn-secondary" data-i18n="clearFilters"></button>
+            <a href="https://www.kolzchut.org.il/he/%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%AA%D7%95%D7%A9%D7%91%D7%99%D7%9D_%D7%91%D7%A4%D7%A8%D7%99%D7%A4%D7%A8%D7%99%D7%94" target="_blank" rel="noopener" data-i18n="eligibilityConditions"></a>
+          </div>
+        </div>
+      </aside>
+
+      <div id="map" data-i18n-arialabel="mapLabel"></div>
+    </main>
+
+    <dialog id="detail-dialog" class="detail-dialog" aria-labelledby="detail-title">
+      <div class="dialog-head">
+        <h2 id="detail-title"></h2>
+        <button type="button" class="dialog-close" data-close data-i18n-arialabel="close">✕</button>
+      </div>
+      <div id="detail-body"></div>
+    </dialog>
+
+    <dialog id="stats-dialog" class="info-dialog stats-dialog" aria-labelledby="stats-title">
+      <div class="dialog-head">
+        <h2 id="stats-title" data-i18n="statsTitle"></h2>
+        <button type="button" class="dialog-close" data-close data-i18n-arialabel="close">✕</button>
+      </div>
+      <div id="stats-body"></div>
+      <p class="detail-note" data-i18n="statNote"></p>
+    </dialog>
+
+    <dialog id="compare-dialog" class="info-dialog compare-dialog" aria-labelledby="compare-title">
+      <div class="dialog-head">
+        <h2 id="compare-title" data-i18n="compareTitle"></h2>
+        <button type="button" class="dialog-close" data-close data-i18n-arialabel="close">✕</button>
+      </div>
+      <div id="compare-body"></div>
+      <div class="dialog-actions">
+        <button id="compare-export-csv" type="button" class="btn-secondary" data-i18n="exportCsv"></button>
+        <button id="compare-export-json" type="button" class="btn-secondary" data-i18n="exportJson"></button>
+        <button id="compare-clear" type="button" class="link-btn" data-i18n="compareClear"></button>
+      </div>
+    </dialog>
+
+    <dialog id="about-dialog" class="info-dialog" aria-labelledby="about-title">
+      <div class="dialog-head">
+        <h2 id="about-title" data-i18n="aboutTitle"></h2>
+        <button type="button" class="dialog-close" data-close data-i18n-arialabel="close">✕</button>
+      </div>
+      <p data-i18n="aboutBody1"></p>
+      <p data-i18n="aboutBody2"></p>
+      <p class="accuracy-note" data-i18n="accuracyNote"></p>
+      <h3 data-i18n="aboutData"></h3>
+      <ul id="about-sources"></ul>
+      <h3 data-i18n="detailsSource"></h3>
+      <ul class="source-links">
+        <li><a href="https://www.kolzchut.org.il/he/%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%AA%D7%95%D7%A9%D7%91%D7%99%D7%9D_%D7%91%D7%A4%D7%A8%D7%99%D7%A4%D7%A8%D7%99%D7%94" target="_blank" rel="noopener" data-i18n="kolzchutLink"></a></li>
+        <li><a href="https://www.gov.il/BlobFolder/dynamiccollectorresultitem/employers-info-090726-1/he/IncomeTax_employers-info-220726-1.pdf" target="_blank" rel="noopener" data-i18n="govEmployers"></a></li>
+      </ul>
+      <h3 data-i18n="sourcePdfs"></h3>
+      <p data-i18n="sourcePdfsBody"></p>
+      <ul class="source-links" id="booklet-links"></ul>
+      <ul class="source-links">
+        <li><a id="about-cbs-source" href="https://www.cbs.gov.il/he/publications/doclib/2019/ishuvim/bycode2024.xlsx" target="_blank" rel="noopener"></a></li>
+        <li><a href="https://github.com/NX1X/OpenTaxMap/tree/main/data-sources" target="_blank" rel="noopener" data-i18n="dataSourcesFolder"></a></li>
+        <li><a href="https://github.com/NX1X/OpenTaxMap" target="_blank" rel="noopener" data-i18n="githubRepoLink"></a></li>
+      </ul>
+      <h3 data-i18n="reportMistake"></h3>
+      <p data-i18n="reportMistakeBody"></p>
+      <ul class="source-links">
+        <li><a href="https://github.com/NX1X/OpenTaxMap/issues/new/choose" target="_blank" rel="noopener" data-i18n="reportGithub"></a></li>
+        <li><a href="https://nx1xlab.dev/contact" target="_blank" rel="noopener" data-i18n="reportContact"></a></li>
+      </ul>
+      <ul class="source-links" id="doc-links"></ul>
+    </dialog>
+
+    <dialog id="a11y-dialog" class="info-dialog" aria-labelledby="a11y-title">
+      <div class="dialog-head">
+        <h2 id="a11y-title" data-i18n="a11yStatementTitle"></h2>
+        <button type="button" class="dialog-close" data-close data-i18n-arialabel="close">✕</button>
+      </div>
+      <p data-i18n="a11yStatementBody"></p>
+      <ul class="source-links">
+        <li><a href="https://nx1xlab.dev/contact" target="_blank" rel="noopener" data-i18n="a11yContact"></a></li>
+        <li><a href="https://github.com/NX1X/OpenTaxMap/issues/new/choose" target="_blank" rel="noopener" data-i18n="reportGithub"></a></li>
+      </ul>
+    </dialog>
+
+    <footer class="site-footer">
+      <nav aria-label="קישורים">
+        <button id="about-open" type="button" class="link-btn" data-i18n="about"></button>
+        <button id="a11y-statement-open" type="button" class="link-btn" data-i18n="accessibility"></button>
+        <a href="https://github.com/NX1X/OpenTaxMap" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://nx1xlab.dev/contact" target="_blank" rel="noopener" data-i18n="reportMistake"></a>
+        <span><span data-i18n="footerBuiltBy"></span> <a href="https://nx1xlab.dev" target="_blank" rel="noopener">NX1X</a></span>
+        <a id="version-link" href="https://github.com/NX1X/OpenTaxMap/releases" target="_blank" rel="noopener"></a>
+      </nav>
+      <p class="disclaimer"><span data-i18n="footerDisclaimer"></span> <span data-i18n="footerLicense"></span></p>
+      <p class="disclaimer" data-i18n="accuracyNote"></p>
+    </footer>
+  </body>
+</html>

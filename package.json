@@ -1,0 +1,26 @@
+{
+  "name": "opentaxmap",
+  "version": "0.1.0",
+  "description": "Interactive map of Israeli localities eligible for income-tax credits (yishuvim mutavim), 2016-2026",
+  "license": "Apache-2.0",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NX1X/OpenTaxMap.git"
+  },
+  "homepage": "https://taxmap.nx1xlab.dev",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node scripts/prerender.mjs",
+    "prerender": "node scripts/prerender.mjs",
+    "preview": "vite preview",
+    "data": "python3 scripts/extract_pdf.py && python3 scripts/build_data.py"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0",
+    "wrangler": "4.114.0"
+  }
+}

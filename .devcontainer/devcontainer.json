@@ -1,0 +1,30 @@
+{
+  "name": "OpenTaxMap",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": { "version": "20" },
+    "ghcr.io/devcontainers/features/python:1": { "version": "3.13" }
+  },
+
+  // poppler-utils provides pdftotext, which scripts/extract_pdf.py shells out to.
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y --no-install-recommends poppler-utils && npm ci --ignore-scripts",
+
+  // No host credential directories are mounted. Building and running the data
+  // pipeline pulls npm and PyPI packages; keeping that off the host means a
+  // compromised dependency cannot reach ~/.ssh, ~/.aws, ~/.gnupg or shell
+  // history. Deploy credentials stay on the host deliberately - deploys are run
+  // from CI, not from inside this container.
+  "mounts": [],
+  "remoteUser": "vscode",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "snyk.snyk-vulnerability-scanner",
+        "ms-python.python",
+        "redhat.vscode-yaml"
+      ]
+    }
+  }
+}

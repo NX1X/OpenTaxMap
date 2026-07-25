@@ -1,0 +1,52 @@
+{
+  "רמת טראמפ": {
+    "en": "Ramat Trump",
+    "lat": 33.13261,
+    "lng": 35.69063,
+    "district": "north",
+    "council": "גולן",
+    "subregion": "golan",
+    "sector": "jewish",
+    "source": "Nominatim/OSM, village node"
+  },
+  "אדוריים": {
+    "en": "Aduraim",
+    "lat": 31.4845,
+    "lng": 35.04494,
+    "district": "js",
+    "council": "הר חברון",
+    "subregion": "yosh",
+    "sector": "jewish",
+    "source": "Nominatim/OSM, hamlet node"
+  },
+  "יונדב": {
+    "en": "Yonadav",
+    "lat": 31.38554,
+    "lng": 35.00372,
+    "district": "js",
+    "council": "הר חברון",
+    "subregion": "yosh",
+    "sector": "jewish",
+    "source": "Nominatim/OSM, hamlet node"
+  },
+  "קדם ערבה": {
+    "en": "Kedem Arava",
+    "lat": 31.80703,
+    "lng": 35.49952,
+    "district": "js",
+    "council": "מגילות ים המלח",
+    "subregion": "bika",
+    "sector": "jewish",
+    "source": "Nominatim/OSM, hamlet node"
+  },
+  "בתרון": {
+    "en": "Bitron",
+    "lat": 32.2238,
+    "lng": 35.54063,
+    "district": "js",
+    "council": "ערבות הירדן",
+    "subregion": "bika",
+    "sector": "jewish",
+    "source": "Hebrew Wikipedia, settled 2026, status granted 11/2025"
+  }
+}

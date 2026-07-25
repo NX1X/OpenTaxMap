@@ -1,0 +1,2948 @@
+[
+ {
+  "name": "אבו סנאן",
+  "code": null,
+  "rate": 12.0,
+  "cap": 186000
+ },
+ {
+  "name": "אבו קורינאת (יישוב)",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "אבו תלול",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "אביבים",
+  "code": null,
+  "rate": 14.0,
+  "cap": 219960
+ },
+ {
+  "name": "אביגיל",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "אבירים",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "אבן מנחם",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "אבן שמואל",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "אבני איתן",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "אבנת",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "אבשלום",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "אדורה",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "אדוריים",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "אדמית",
+  "code": null,
+  "rate": 14.0,
+  "cap": 219960
+ },
+ {
+  "name": "אודם",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "אוהד",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "אום בטין",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "אופקים",
+  "code": null,
+  "rate": 18.0,
+  "cap": 259920
+ },
+ {
+  "name": "אור הגנוז",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "אור הנר",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "אורטל",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "אורים",
+  "code": null,
+  "rate": 14.0,
+  "cap": 180000
+ },
+ {
+  "name": "אחוזם",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "אחיהוד",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "איבים",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "איילת השחר",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "אילון",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "אילות",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "איתן",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "אל -רום",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "אל סייד",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "אלומות",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "אלוני הבשן",
+  "code": null,
+  "rate": 14.0,
+  "cap": 219960
+ },
+ {
+  "name": "אלי-עד",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "אליאב",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "אליפז",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "אליפלט",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "אלמגור",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "אלקוש",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "אמירים",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "אמנון",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "אמציה",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "אניעם",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "אספר",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "אפיק",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "אפיקים",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "ארגמן",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "ארז",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "אשבול",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "אשבל",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "אשדות יעקב (איחוד)",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "אשדות יעקב (מאוחד)",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "אשחר",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "אשכולות",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "אשל הנשיא",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "אשלים",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "אשקלון",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "אשרת",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "באר אורה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "באר מילכה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "בארי",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "בוסתן הגליל",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "בוקעאתא",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "בטחה",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "ביר הדאג'",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "בירייה",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "בית ג'ן",
+  "code": null,
+  "rate": 14.0,
+  "cap": 259920
+ },
+ {
+  "name": "בית הגדי",
+  "code": null,
+  "rate": 14.0,
+  "cap": 180000
+ },
+ {
+  "name": "בית הלל",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "בית העמק",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "בית הערבה",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "בית זרע",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "בית חוגלה",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "בית יוסף",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "בית קמה",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "בית שאן",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "בן עמי",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "בני דקלים",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "בני יהודה",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "בני נצרים",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "בענה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 186000
+ },
+ {
+  "name": "בצת",
+  "code": null,
+  "rate": 12.0,
+  "cap": 186600
+ },
+ {
+  "name": "בר יוחאי",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "ברור חיל",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "ברוש",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "ברעם",
+  "code": null,
+  "rate": 14.0,
+  "cap": 219960
+ },
+ {
+  "name": "בתרון",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "ג'דיידה-מכר",
+  "code": null,
+  "rate": 12.0,
+  "cap": 186000
+ },
+ {
+  "name": "ג'ולס",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "ג'ש (גוש חלב)",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "גבולות",
+  "code": null,
+  "rate": 14.0,
+  "cap": 180000
+ },
+ {
+  "name": "גבים",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "גבעולים",
+  "code": null,
+  "rate": 14.0,
+  "cap": 180000
+ },
+ {
+  "name": "גבעות בר",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "גבעת יואב",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "גברעם",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "גדות",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "גונן",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "גורן",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "גורנות הגליל",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "גילון",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "גילת",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "גינוסר",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "גיתה",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "געתון",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "גרופית",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "גשור",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "גשר",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "גשר הזיו",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "דביר",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "דגניה א'",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "דגניה ב'",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "דוב\"ב",
+  "code": null,
+  "rate": 14.0,
+  "cap": 219960
+ },
+ {
+  "name": "דורות",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "דייר אל-אסד",
+  "code": null,
+  "rate": 12.0,
+  "cap": 186000
+ },
+ {
+  "name": "דייר חנא",
+  "code": null,
+  "rate": 12.0,
+  "cap": 186000
+ },
+ {
+  "name": "דימונה",
+  "code": null,
+  "rate": 18.0,
+  "cap": 245400
+ },
+ {
+  "name": "דישון",
+  "code": null,
+  "rate": 14.0,
+  "cap": 219960
+ },
+ {
+  "name": "דלתון",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "דן",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "דפנה",
+  "code": null,
+  "rate": 14.0,
+  "cap": 219960
+ },
+ {
+  "name": "דקל",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "דריג'את",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "האון",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "הגושרים",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "הילה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "הר עמשא",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "הררית",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "זיקים",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "זמרת",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "זרועה",
+  "code": null,
+  "rate": 14.0,
+  "cap": 180000
+ },
+ {
+  "name": "חגי",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "חד-נס",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "חולית",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "חולתה",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "חוסן",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "חוסנייה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "חוקוק",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "חורה",
+  "code": null,
+  "rate": 18.0,
+  "cap": 259920
+ },
+ {
+  "name": "חורפיש",
+  "code": null,
+  "rate": 14.0,
+  "cap": 259920
+ },
+ {
+  "name": "חזון",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "חלוץ",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "חלץ",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "חמדיה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "חמדת",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "חניתה",
+  "code": null,
+  "rate": 14.0,
+  "cap": 219960
+ },
+ {
+  "name": "חספין",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "חצבה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "חצור הגלילית",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "חצרים",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "חרשים",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "טבריה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "טובא-זנגרייה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "טירת צבי",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "טל-אל",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "טללים",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "טמרה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 186000
+ },
+ {
+  "name": "טנא",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "טפחות",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "יאנוח-ג'ת",
+  "code": null,
+  "rate": 12.0,
+  "cap": 186000
+ },
+ {
+  "name": "יבול",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "יד מרדכי",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "יהל",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "יובל",
+  "code": null,
+  "rate": 14.0,
+  "cap": 219960
+ },
+ {
+  "name": "יובלים",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "יונדב",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "יונתן",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "יושיביה",
+  "code": null,
+  "rate": 14.0,
+  "cap": 213240
+ },
+ {
+  "name": "יחיעם",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "יטבתה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "יכיני",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "יסוד המעלה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "יסעור",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "יעד",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "יערה",
+  "code": null,
+  "rate": 14.0,
+  "cap": 219960
+ },
+ {
+  "name": "יפית",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "יפתח",
+  "code": null,
+  "rate": 14.0,
+  "cap": 219960
+ },
+ {
+  "name": "יראון",
+  "code": null,
+  "rate": 14.0,
+  "cap": 219960
+ },
+ {
+  "name": "ירדנה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "ירוחם",
+  "code": null,
+  "rate": 18.0,
+  "cap": 245400
+ },
+ {
+  "name": "ירכא",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "ישע",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "יתד",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "כאבול",
+  "code": null,
+  "rate": 12.0,
+  "cap": 186000
+ },
+ {
+  "name": "כברי",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "כדיתה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "כורזים",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "כחל",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "כחלה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "כיסופים",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "כישור",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "כליל",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "כלנית",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "כמאנה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "כמהין",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "כמון",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "כנף",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "כנרת (מושבה)",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "כנרת (קבוצה)",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "כסיפה",
+  "code": null,
+  "rate": 18.0,
+  "cap": 259920
+ },
+ {
+  "name": "כסרא-סמיע",
+  "code": null,
+  "rate": 14.0,
+  "cap": 259920
+ },
+ {
+  "name": "כפר בלום",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "כפר גלעדי",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "כפר הנשיא",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "כפר חושן",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "כפר חנניה",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "כפר חרוב",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "כפר יאסיף",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "כפר מימון",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "כפר מסריק",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "כפר סאלד",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "כפר עזה",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "כפר ראש הנקרה",
+  "code": null,
+  "rate": 14.0,
+  "cap": 219960
+ },
+ {
+  "name": "כפר רוזנואלד (זרעית)",
+  "code": null,
+  "rate": 14.0,
+  "cap": 219960
+ },
+ {
+  "name": "כפר רופין",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "כפר שמאי",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "כרכום",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "כרם בן זמרה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "כרם שלום",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "כרמי קטיף",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "כרמיאל",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "כרמייה",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "כרמים",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "כרמל",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "לבון",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "לבנים",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "להב",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "להבות הבשן",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "לוחמי הגיטאות",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "לוטם",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "לוטן",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "לימן",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "לפידות",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "לקיה",
+  "code": null,
+  "rate": 18.0,
+  "cap": 259920
+ },
+ {
+  "name": "מבוא חמה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "מבועים",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "מבטחים",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "מבקיעים",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "מג'ד אל-כרום",
+  "code": null,
+  "rate": 12.0,
+  "cap": 186000
+ },
+ {
+  "name": "מג'דל שמס",
+  "code": null,
+  "rate": 20.0,
+  "cap": 259920
+ },
+ {
+  "name": "מגאר",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "מגדל",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "מגן",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "מדרשת בן גוריון",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "מולדה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "מורן",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "מזרעה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 186000
+ },
+ {
+  "name": "מחולה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "מחנה טלי",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "מחנה יוכבד",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "מחנה יפה",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "מחנה יתיר",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "מחניים",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "מטולה",
+  "code": null,
+  "rate": 14.0,
+  "cap": 219960
+ },
+ {
+  "name": "מיצר",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "מירון",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "מכחול",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "מכמנים",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "מלילות",
+  "code": null,
+  "rate": 14.0,
+  "cap": 180000
+ },
+ {
+  "name": "מלכייה",
+  "code": null,
+  "rate": 14.0,
+  "cap": 219960
+ },
+ {
+  "name": "מנוף",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "מנות",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "מנחמיה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "מנרה",
+  "code": null,
+  "rate": 14.0,
+  "cap": 219960
+ },
+ {
+  "name": "מסדה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "מסלול",
+  "code": null,
+  "rate": 14.0,
+  "cap": 180000
+ },
+ {
+  "name": "מסעדה",
+  "code": null,
+  "rate": 14.0,
+  "cap": 259920
+ },
+ {
+  "name": "מעגלים",
+  "code": null,
+  "rate": 14.0,
+  "cap": 180000
+ },
+ {
+  "name": "מעגן",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "מעוז חיים",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "מעון",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "מעונה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "מעיין ברוך",
+  "code": null,
+  "rate": 14.0,
+  "cap": 219960
+ },
+ {
+  "name": "מעיליא",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "מעלה גמלא",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "מעלות-תרשיחא",
+  "code": null,
+  "rate": 14.0,
+  "cap": 259920
+ },
+ {
+  "name": "מפלסים",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "מצדות יהודה",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "מצובה",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "מצפה רמון",
+  "code": null,
+  "rate": 18.0,
+  "cap": 259920
+ },
+ {
+  "name": "מצפה שלם",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "מרגליות",
+  "code": null,
+  "rate": 14.0,
+  "cap": 219960
+ },
+ {
+  "name": "מרום גולן",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "מרחב עם",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "משאבי שדה",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "משגב עם",
+  "code": null,
+  "rate": 14.0,
+  "cap": 219960
+ },
+ {
+  "name": "משואה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "משכיות",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "משמר הירדן",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "משמר הנגב",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "מתת",
+  "code": null,
+  "rate": 14.0,
+  "cap": 219960
+ },
+ {
+  "name": "נאות גולן",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "נאות הכיכר",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "נאות מרדכי",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "נאות סמדר",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "נבטים",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "נגוהות",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "נהרייה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 226560
+ },
+ {
+  "name": "נוב",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "נווה",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "נווה אור",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "נווה אטי\"ב",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "נווה איתן",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "נווה זוהר",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "נווה זיו",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "נווה חריף",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "נועם",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "נוף הגליל",
+  "code": null,
+  "rate": 12.0,
+  "cap": 226560
+ },
+ {
+  "name": "נחל עוז",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "נחף",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "נטועה",
+  "code": null,
+  "rate": 14.0,
+  "cap": 219960
+ },
+ {
+  "name": "נטור",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "נטע",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "ניצנה (קהילת חינוך)",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "ניצני סיני",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "ניר יצחק",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "ניר משה",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "ניר עוז",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "ניר עם",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "ניר עקיבא",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "נירים",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "נמרוד",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "נס עמים",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "נעמ\"ה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "נתיב העשרה",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "נתיב השיירה",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "נתיבות",
+  "code": null,
+  "rate": 16.0,
+  "cap": 226560
+ },
+ {
+  "name": "סאג'ור",
+  "code": null,
+  "rate": 12.0,
+  "cap": 186000
+ },
+ {
+  "name": "סאסא",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "סוסיה",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "סופה",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "סח'נין",
+  "code": null,
+  "rate": 12.0,
+  "cap": 186000
+ },
+ {
+  "name": "סלמה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "סמר",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "סנסנה",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "סעד",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "סער",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "ספיר",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "ע'ג'ר",
+  "code": null,
+  "rate": 20.0,
+  "cap": 259920
+ },
+ {
+  "name": "עבדון",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "עברון",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "עזוז",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "עידן",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "עין אל-אסד",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "עין גב",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "עין גדי",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "עין הבשור",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "עין המפרץ",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "עין הנצי\"ב",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "עין השלושה",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "עין זיוון",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "עין חצבה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "עין יהב",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "עין יעקב",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "עין קנייא",
+  "code": null,
+  "rate": 14.0,
+  "cap": 259920
+ },
+ {
+  "name": "עין תמר",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "עיר אובות",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "עכו",
+  "code": null,
+  "rate": 12.0,
+  "cap": 226560
+ },
+ {
+  "name": "עלומים",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "עלמה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "עמוקה",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "עמיעד",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "עמיעוז",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "עמיר",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "עמקה",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "עצמון שגב",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "עראבה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "עראמשה",
+  "code": null,
+  "rate": 14.0,
+  "cap": 219960
+ },
+ {
+  "name": "ערב אל נעים",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "ערד",
+  "code": null,
+  "rate": 18.0,
+  "cap": 259920
+ },
+ {
+  "name": "ערערה-בנגב",
+  "code": null,
+  "rate": 18.0,
+  "cap": 259920
+ },
+ {
+  "name": "עשהאל",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "עתניאל",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "פארן",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "פדויים",
+  "code": null,
+  "rate": 14.0,
+  "cap": 180000
+ },
+ {
+  "name": "פורייה -כפר עבודה",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "פורייה -נווה עובד",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "פורייה עילית",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "פטיש",
+  "code": null,
+  "rate": 14.0,
+  "cap": 180000
+ },
+ {
+  "name": "פלך",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "פני חבר",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "פסוטה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "פעמי תש\"ז",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "פצאל",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "פקיעין (בוקייעה)",
+  "code": null,
+  "rate": 14.0,
+  "cap": 259920
+ },
+ {
+  "name": "פקיעין חדשה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "פרוד",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "פרי גן",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "צאלים",
+  "code": null,
+  "rate": 14.0,
+  "cap": 213240
+ },
+ {
+  "name": "צביה",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "צבעון",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "צוחר",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "צופר",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "צוקים",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "צוריאל",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "צורית",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "צפת",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "קדם ערבה",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "קדמת צבי",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "קדרים",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "קורנית",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "קטורה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "קלחים",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "קליה",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "קלע",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "קצר א-סר",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "קצרין",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "קריית ארבע",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "קריית שמונה",
+  "code": null,
+  "rate": 20.0,
+  "cap": 259920
+ },
+ {
+  "name": "קשת",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "ראמה",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "ראס אל-עין",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "ראש פינה",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "רביבים",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "רביד",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "רגבה",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "רהט",
+  "code": null,
+  "rate": 16.0,
+  "cap": 226560
+ },
+ {
+  "name": "רוח מדבר",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "רוחמה",
+  "code": null,
+  "rate": 14.0,
+  "cap": 180000
+ },
+ {
+  "name": "רועי",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "רותם",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "רחוב",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "ריחאנייה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "רמות",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "רמות נפתלי",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "רמת טראמפ",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "רמת מגשימים",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "רנן",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "רעים",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "רקפת",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "רתמים",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "שאר ישוב",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "שבי דרום",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "שבי ציון",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "שגב-שלום",
+  "code": null,
+  "rate": 18.0,
+  "cap": 259920
+ },
+ {
+  "name": "שדה אליהו",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "שדה אליעזר",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "שדה בוקר",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "שדה דוד",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "שדה נחום",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "שדה נחמיה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "שדה ניצן",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "שדה צבי",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "שדי אברהם",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "שדי תרומות",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "שדמות מחולה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "שדרות",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "שובה",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "שובל",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "שומרה",
+  "code": null,
+  "rate": 14.0,
+  "cap": 219960
+ },
+ {
+  "name": "שומרייה",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "שוקדה",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "שורשים",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "שזור",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "שחרות",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "שיבולים",
+  "code": null,
+  "rate": 14.0,
+  "cap": 180000
+ },
+ {
+  "name": "שיזף",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "שיטים",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "שייח' דנון",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "שכניה",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "שלווה",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "שלווה במדבר",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "שלומי",
+  "code": null,
+  "rate": 20.0,
+  "cap": 259920
+ },
+ {
+  "name": "שלומית",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "שמיר",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "שמעה",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "שמרת",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "שני (ליבנה)",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "שניר",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "שעב",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "שעל",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "שער הגולן",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "שפר",
+  "code": null,
+  "rate": 10.0,
+  "cap": 180000
+ },
+ {
+  "name": "שקף",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "שרשרת",
+  "code": null,
+  "rate": 14.0,
+  "cap": 180000
+ },
+ {
+  "name": "שתולה",
+  "code": null,
+  "rate": 14.0,
+  "cap": 219960
+ },
+ {
+  "name": "תאשור",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "תדהר",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "תובל",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "תושייה",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "תל קציר",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "תל שבע",
+  "code": null,
+  "rate": 18.0,
+  "cap": 259920
+ },
+ {
+  "name": "תל תאומים",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "תלם",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "תלמי אליהו",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "תלמי ביל\"ו",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "תלמי יוסף",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "תלמים",
+  "code": null,
+  "rate": 7.0,
+  "cap": 146640
+ },
+ {
+  "name": "תפרח",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ },
+ {
+  "name": "תקומה",
+  "code": null,
+  "rate": 20.0,
+  "cap": 267840
+ },
+ {
+  "name": "תרבין א-צאנע (יישוב)",
+  "code": null,
+  "rate": 12.0,
+  "cap": 213240
+ }
+]

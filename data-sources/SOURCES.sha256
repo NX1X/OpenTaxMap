@@ -1,0 +1,43 @@
+# SHA-256 of every source document redistributed in data-sources/.
+#
+# These PDFs are the authority for every rate and cap the site publishes.
+# Recording their digests separates the two ways extracted numbers can
+# change: a different source document, or a different pdftotext version
+# parsing the same document. Without this, both look identical.
+#
+# Verify:  sha256sum -c SOURCES.sha256
+# Regenerate after adding a source:
+#   find data-before-filter data-after-filter -name '*.pdf' | sort | xargs sha256sum
+
+30837c0cf9122526395e74591443f7b27767cc8edf921baebef3ceecd5537505  data-after-filter/tax-map-2011.pdf
+7ed24570e04480d5b80fad1efa8cdfa6dbd17dbb2f876d03c56968c820d831e4  data-after-filter/tax-map-2012.pdf
+07f416e408c439066e116120fd9ba6bab84dd36b2fca2e8090031859c4fd0cab  data-after-filter/tax-map-2013.pdf
+92108adc26684f1fbaa96a020d64982ed584efef276c3870351c867857a34200  data-after-filter/tax-map-2014.pdf
+57a000a7ed37b78377213fd94c4c9e0d0050ac45904a9a40427f19109ed1b3d9  data-after-filter/tax-map-2015.pdf
+ac05936b69e2a33f8a5c0441279adc97cf6d7b8742054a607b9c4b807d5fad86  data-after-filter/tax-map-2016.pdf
+18531d3fd9f9e1a3622e79a4c7f38e532fc029feca5abc630d5fa70ee8e5cd53  data-after-filter/tax-map-2017.pdf
+2fd4f9ef593ea4c3cfba492cf613298018042abc9510584647257cf356678f01  data-after-filter/tax-map-2018.pdf
+883666660ec4383847855f0072b59416e2b5eebfa86094a3885e9bc130b4d368  data-after-filter/tax-map-2019.pdf
+e90341a6207c55f2597949ee62513610a9f6b5404974f42301781489ad4a4ef9  data-after-filter/tax-map-2020.pdf
+4b3a59aecd912122873948125ade749dce78ac388bc1d6c3e4c2b495297846a0  data-after-filter/tax-map-2021.pdf
+7804719ccfd71e278c093b82c692ac1ad161a4a745c41713c4ac24adc84263df  data-after-filter/tax-map-2022.pdf
+a1663af09a2ec6c6d8504e1e238814721b22ccbb7bb7d6217e1925fd7cfec5fc  data-after-filter/tax-map-2023.pdf
+6fe0b1f5b46ea59d95549670dfd1690a60a05c8a74e63c6d2bda20a777c66a92  data-after-filter/tax-map-2024.pdf
+1d6dec87e115edc6fbc694b8a0c2ef7e0aff7331d6838aeaf1747d8d00b67399  data-after-filter/tax-map-2025.pdf
+0261f0cea4d422bdcc3c4a073d050c423568e9ffb52c497fd13dc686cdc4ad8e  data-after-filter/tax-map-2026.pdf
+82f2908a6e3219a57b01db2cffda3ffd16e33034c646706b7d4bdef048dd327e  data-before-filter/generalInformation_IncomeTaxAnnualDeductions-booklet_nikuy_2011.pdf
+7afbd4874dcbdd75828485294a9ee4e0c6608ed6eba7ac6d2294f4941a29a5e3  data-before-filter/generalInformation_income-tax-monthly-deductions-booklet_luah_azer_hodshi_2018_acc.pdf
+bb0713374649a08f49f662c384eda7a34bbf326553836ddcf0bd4bb705321ec8  data-before-filter/generalInformation_income-tax-monthly-deductions-booklet_luah_ezer_2012.pdf
+be8e4476b715973a8b7127bbb6b284485ba5245fe820e58d9a5f799970846b3d  data-before-filter/generalInformation_income-tax-monthly-deductions-booklet_luah_ezer_2013.pdf
+473a46fbb6d0e22cc9a00ecd448cf8c2c8be9a747fdc62c19875d967fca1a54e  data-before-filter/generalInformation_income-tax-monthly-deductions-booklet_luah_ezer_2014.pdf
+1be463dea70ab706dceb1b2ca521400af1041e8ceb3414fa5b3bda1609a224bb  data-before-filter/generalInformation_income-tax-monthly-deductions-booklet_luah_ezer_2015.pdf
+28d35f4d61f0f1c587efc54cd4dd640bbef5c99701222522a966640ba7a2dd1e  data-before-filter/generalInformation_income-tax-monthly-deductions-booklet_luah_ezer_2016_acc.pdf
+027168cf30b89d446c9e8da62d22651c5d836f756f9c94353f7175f9cdb319eb  data-before-filter/generalInformation_income-tax-monthly-deductions-booklet_luah_ezer_2017_acc.pdf
+de17dd4f44077cc3a456be279e8e92f03bf25c859f4e29d39675dfb742fdab0d  data-before-filter/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2022.pdf
+2a94822b49c226d9b4439aed7cfeb0673f5ba8cd01869ed1d56a4108e4f7d943  data-before-filter/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2023.pdf
+b7359a865ec08bf77a14f8b1e76d141efe9bbf2e34b4c84abb4ec67380237fe8  data-before-filter/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2024.pdf
+41496dd374f5e3a397b17b5dfdfd2055537b66bac4c2fc4543d544406522fd73  data-before-filter/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2025.pdf
+de6fee7208bdde4ec8b8731be95bcea2106aba449d949e5e646c2a0d5f2182a1  data-before-filter/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf
+9aa5634c17302c961a922270d39759ea771c68a47b456eda47033fc47d10d94c  data-before-filter/itc_itc_necuyim2021-1.pdf
+3f1b20ff8fb3f2d401c768b8a4f30d1b15d92283ca64c9dfff1ccd90c28e2b0a  data-before-filter/luachyanoar-2020.pdf
+6581f33e7d54069107bd7b7d78e037518c73e28796fca2ebe1dd90f232fb4cc3  data-before-filter/luah_nikuim_shnati_2019_acc.pdf

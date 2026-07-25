@@ -1,0 +1,6 @@
+Contact: https://nx1xlab.dev/contact
+Contact: https://github.com/NX1X/OpenTaxMap/security/advisories/new
+Expires: 2027-07-25T00:00:00.000Z
+Preferred-Languages: he, en
+Canonical: https://taxmap.nx1xlab.dev/.well-known/security.txt
+Policy: https://github.com/NX1X/OpenTaxMap/blob/main/SECURITY.md

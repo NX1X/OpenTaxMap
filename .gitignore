@@ -1,0 +1,39 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+__pycache__/
+.env
+.env.*
+!.env.example
+
+# Cloudflare / wrangler
+# .dev.vars holds local secrets in PLAINTEXT - never commit it.
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+.wrangler/
+
+# Python (the offline data pipeline)
+.venv/
+venv/
+*.py[cod]
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# Build / tool caches
+.vite/
+*.tsbuildinfo
+coverage/
+
+# Internal working notes - not part of the published repo.
+# Public-facing equivalents: README.md, CHANGELOG.md, ROADMAP.md.
+docs-internal/
+
+# Claude Code / assistant files - keep local, do not commit
+.claude/
+.claude*
+CLAUDE.md
+**/CLAUDE.md
+CLAUDE.local.md

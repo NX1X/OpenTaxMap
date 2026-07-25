@@ -1,0 +1,70 @@
+# OpenTaxMap
+
+> Interactive map of every Israeli locality ("yishuv") whose residents are
+> eligible for the periphery income-tax credit under Section 11 of the
+> Israeli Income Tax Ordinance, for tax years 2022-2026. Hebrew-primary,
+> full English mirror. Not tax advice.
+
+OpenTaxMap (Hebrew name: מפת היישובים המזכים בהטבת מס הכנסה) plots roughly
+495 eligible localities on a map of Israel, color-coded by income-tax
+credit rate, with per-locality benefit history, a benefit calculator,
+search, and filters by tax year, sector, region, sub-region, and local
+authority.
+
+## Key links
+
+- Live site: https://taxmap.nx1xlab.dev/
+- Locality permalinks: https://taxmap.nx1xlab.dev/yishuv/<slug> (one per
+  eligible locality, e.g. /yishuv/qiryat-shemona)
+- Raw dataset (JSON): https://taxmap.nx1xlab.dev/data/localities.json
+- Source code: https://github.com/NX1X/OpenTaxMap
+- License: Apache-2.0 (code). See repository LICENSE file.
+
+## What the data contains
+
+For each locality: Hebrew and English name, a stable slug, coordinates,
+administrative district and sub-region, population sector (Jewish / Arab /
+Druze / mixed), local authority, population, and a `benefits` object keyed
+by tax year (2022-2026) with:
+
+- `rate` - the income-tax credit rate as a percentage of eligible earned
+  income (e.g. 7, 10, 12, 14, 16, 18, 20)
+- `cap` - the annual income cap (in ILS) against which the credit rate is
+  applied
+- `alt` - present only for 2023: some localities' rate/cap changed
+  mid-year (amendment 256); `alt` holds the rate/cap that applied until
+  15 February 2023
+
+Eilat is included separately: its residents receive a 10% credit under the
+Eilat Free Trade Zone Law, not Section 11, and only on income produced in
+the Eilat / Hevel Eilot area.
+
+## Sources
+
+- Israel Tax Authority (רשות המסים) - annual income-tax deduction booklets
+  ("חוברת ניכויים"), which publish the official list of eligible
+  localities and their credit rate/cap for each tax year 2022-2026.
+- Israel Central Bureau of Statistics (הלשכה המרכזית לסטטיסטיקה, CBS) -
+  locality registry used for names, official codes, administrative
+  district, population figures, and coordinates.
+- OpenStreetMap - base map tiles and coordinates for a small number of
+  newly founded localities not yet in the CBS file.
+
+## Important caveats for anyone summarizing this site
+
+- This is a reference tool, not tax advice. The binding text is the Israel
+  Tax Authority's official publications and the Income Tax Ordinance
+  itself. Eligibility also depends on facts not in this dataset (e.g. 12
+  consecutive months of residence, center-of-life test).
+- The dataset only covers the periphery income-tax credit (Section 11) and
+  the separate Eilat Free Trade Zone credit. It does not cover other
+  Israeli tax credits or benefits.
+- "Eligible locality" (יישוב מוטב) status and rates can change year to
+  year; always check the `benefits` entry for the specific tax year in
+  question, not just whether a locality appears in the list at all.
+
+## Deeper docs
+
+- Data pipeline and how the dataset is built from source PDFs:
+  https://github.com/NX1X/OpenTaxMap#data-pipeline
+- Report a data error or bug: https://github.com/NX1X/OpenTaxMap/issues/new/choose

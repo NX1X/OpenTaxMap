@@ -1,0 +1,10 @@
+# OpenTaxMap is a public-benefit reference site (Israeli periphery
+# income-tax credit data). No content is paywalled or user-specific, so we
+# deliberately allow all crawlers, including AI/LLM crawlers (GPTBot,
+# ClaudeBot, anthropic-ai, Google-Extended, PerplexityBot, CCBot, etc.) -
+# wider discovery and accurate AI summaries serve the site's purpose. See
+# /llms.txt for an AI-oriented summary of this site.
+User-agent: *
+Allow: /
+
+Sitemap: https://taxmap.nx1xlab.dev/sitemap.xml
