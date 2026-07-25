@@ -44,7 +44,7 @@ for (const loc of data.localities) {
     ? `זיכוי ${b.rate}% ממס הכנסה עד תקרת הכנסה של ${b.cap.toLocaleString('he-IL')} ש"ח בשנת ${latestYear}`
     : `הטבת מס בשנים ${years[0]}-${years[years.length - 1]}`
   const title = `${loc.he} - הטבת מס הכנסה | OpenTaxMap`
-  const desc = `${loc.he} (${loc.en}) - יישוב מוטב: ${rateText}. שיעורי הזיכוי ותקרות ההכנסה לשנים 2022-2026, על מפה אינטראקטיבית.`
+  const desc = `${loc.he} (${loc.en}) - יישוב מוטב: ${rateText}. שיעורי הזיכוי ותקרות ההכנסה לשנים ${data.years[0]}-${data.years[data.years.length - 1]}, על מפה אינטראקטיבית.`
   const url = `${base}/yishuv/${loc.slug}`
 
   let html = shell

@@ -15,6 +15,7 @@
 [![Stars](https://img.shields.io/github/stars/NX1X/OpenTaxMap?style=flat)](https://github.com/NX1X/OpenTaxMap/stargazers)
 [![Views](https://komarev.com/ghpvc/?username=NX1X-OpenTaxMap&label=views&color=0e75b6)](https://github.com/NX1X/OpenTaxMap)
 [![Made by NX1X](https://img.shields.io/badge/made%20by-NX1X-111)](https://nx1xlab.dev)
+[![NXTools Collection](https://img.shields.io/badge/part%20of-NXTools-0e75b6)](https://nx1xlab.dev/nxtools)
 
 **מפת היישובים המזכים בהטבת מס הכנסה** - an interactive map of every Israeli
 locality whose residents are eligible for the periphery income-tax credit
@@ -22,6 +23,8 @@ locality whose residents are eligible for the periphery income-tax credit
 years 2016-2026.
 
 Live: https://taxmap.nx1xlab.dev
+
+> Part of the [NXTools Collection](https://nx1xlab.dev/nxtools) by NX1X.
 
 ## Features
 
