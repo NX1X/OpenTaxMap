@@ -19,6 +19,12 @@ Hebrew version: [CHANGELOG.he.md](CHANGELOG.he.md).
 - The "you are here" marker is now a larger red pin, clearly distinct from the
   blue locality markers.
 
+### Security
+
+- The salary entered in the benefit calculator is now remembered only for the
+  current browsing session instead of being kept indefinitely, so it is no
+  longer pre-filled for the next person on a shared or public computer.
+
 ## [0.2.0] - 2026-07-26
 
 ### Added

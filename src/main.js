@@ -8,6 +8,11 @@ import { STRINGS, makeT } from './i18n.js'
 const params = new URLSearchParams(location.search)
 const stored = (k) => { try { return localStorage.getItem(k) } catch { return null } }
 const store = (k, v) => { try { localStorage.setItem(k, v) } catch { /* private mode */ } }
+// Session-scoped variants. Used for the salary input: it is personal financial
+// data, so it must not outlive the tab. On a shared or public computer,
+// localStorage would pre-fill the previous visitor's salary indefinitely.
+const sessionStored = (k) => { try { return sessionStorage.getItem(k) } catch { return null } }
+const sessionStore = (k, v) => { try { sessionStorage.setItem(k, v) } catch { /* private mode */ } }
 
 const state = {
   lang: params.get('lang') || stored('lang') || 'he',
@@ -98,7 +103,7 @@ function rampColor(cls) {
 const nf = () => new Intl.NumberFormat(state.lang === 'he' ? 'he-IL' : 'en-IL')
 
 function normSearch(s) {
-  return s.toLowerCase().replace(/["'״׳׳״]/g, '').replace(/קריית/g, 'קרית')
+  return s.toLowerCase().replace(/["'״׳]/g, '').replace(/קריית/g, 'קרית')
 }
 
 // ---------------------------------------------------------------- i18n & prefs
@@ -640,7 +645,7 @@ function buildCalculator(loc) {
   salary.id = 'calc-salary'
   salary.min = '0'
   salary.step = '500'
-  salary.value = stored('calcSalary') || '12000'
+  salary.value = sessionStored('calcSalary') || '12000'
   salaryField.append(salaryLabel, salary)
   const pointsField = document.createElement('div')
   pointsField.className = 'field'
@@ -686,7 +691,7 @@ function buildCalculator(loc) {
       p.textContent = line
       out.appendChild(p)
     }
-    store('calcSalary', salary.value)
+    sessionStore('calcSalary', salary.value)
     store('calcPoints', points.value)
   }
   salary.addEventListener('input', recalc)
