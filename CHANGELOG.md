@@ -22,9 +22,9 @@ Hebrew version: [CHANGELOG.he.md](CHANGELOG.he.md).
 
 ### Security
 
-- The salary entered in the benefit calculator is now remembered only for the
-  current browsing session instead of being kept indefinitely, so it is no
-  longer pre-filled for the next person on a shared or public computer.
+- The salary entered in the benefit calculator is no longer saved in the
+  browser. It is kept only while the page is open, so it is not pre-filled for
+  the next person on a shared or public computer.
 
 ## [0.2.0] - 2026-07-26
 
