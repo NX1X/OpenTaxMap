@@ -15,7 +15,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: "Release tag (e.g. v1.2.0)."
+        description: "Release version, with or without the v (e.g. v1.2.0 or 1.2.0)."
         required: true
 
 permissions:
@@ -91,8 +91,10 @@ jobs:
           TARGET_SHA: ${{ github.sha }}
         run: |
           set -euo pipefail
+          # Accept the input with or without a leading "v" and normalize to vX.Y.Z.
+          RELEASE_VERSION="v${RELEASE_VERSION#v}"
           if ! printf '%s' "$RELEASE_VERSION" | grep -Eq '^v[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.-]+)?$'; then
-            echo "::error::Invalid release tag '$RELEASE_VERSION'. Expected vMAJOR.MINOR.PATCH."
+            echo "::error::Invalid release version '$RELEASE_VERSION'. Expected MAJOR.MINOR.PATCH (with or without a leading v)."
             exit 1
           fi
           VERSION_NUM="${RELEASE_VERSION#v}"
