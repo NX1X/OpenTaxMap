@@ -8,6 +8,20 @@ Hebrew version: [CHANGELOG.he.md](CHANGELOG.he.md).
 
 ## [Unreleased]
 
+## [0.2.2] - 2026-07-26
+
+### Fixed
+
+- The page no longer shifts while it loads (cumulative layout shift cut from
+  about 0.14 to about 0.00), so controls do not jump under your finger on a
+  slow connection.
+
+### Changed
+
+- Each locality page now carries its own structured data (name, breadcrumb,
+  place) so search engines classify it correctly, and `llms.txt` uses proper
+  markdown links. Added preconnect hints so the map tiles start loading sooner.
+
 ## [0.2.1] - 2026-07-26
 
 ### Added
@@ -104,7 +118,8 @@ First public version.
 - Supply chain locked down: pinned dependencies with verified hashes, pinned CI
   actions, and automated dependency, secret, and code scanning.
 
-[Unreleased]: https://github.com/NX1X/OpenTaxMap/compare/v0.2.1...HEAD
+[Unreleased]: https://github.com/NX1X/OpenTaxMap/compare/v0.2.2...HEAD
+[0.2.2]: https://github.com/NX1X/OpenTaxMap/compare/v0.2.1...v0.2.2
 [0.2.1]: https://github.com/NX1X/OpenTaxMap/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/NX1X/OpenTaxMap/compare/v0.1.1...v0.2.0
 [0.1.1]: https://github.com/NX1X/OpenTaxMap/compare/v0.1.0...v0.1.1
