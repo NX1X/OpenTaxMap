@@ -22,7 +22,7 @@ Rebuilding the dataset (requires Python 3.11+):
 Requires the `pdftotext` binary (poppler-utils; `sudo apt install poppler-utils`).
 
 ```bash
-pip install -r requirements.txt
+pip install --require-hashes -r scripts/requirements.txt
 npm run data
 ```
 

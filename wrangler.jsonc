@@ -10,7 +10,12 @@
   "assets": {
     "directory": "./dist",
     "binding": "ASSETS",
-    "not_found_handling": "single-page-application"
+    "not_found_handling": "single-page-application",
+    // Serve /yishuv/<slug> directly instead of 307-ing to /yishuv/<slug>/.
+    // The prerendered pages' canonical tags and every sitemap entry use the
+    // slash-less form, so the default auto-trailing-slash made all 536
+    // advertised URLs redirect.
+    "html_handling": "drop-trailing-slash"
   },
   "routes": [
     {

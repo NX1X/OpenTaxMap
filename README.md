@@ -6,7 +6,7 @@
 
 [![CI](https://github.com/NX1X/OpenTaxMap/actions/workflows/ci.yml/badge.svg)](https://github.com/NX1X/OpenTaxMap/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/NX1X/OpenTaxMap/actions/workflows/codeql.yml/badge.svg)](https://github.com/NX1X/OpenTaxMap/actions/workflows/codeql.yml)
-[![Release & Deploy](https://github.com/NX1X/OpenTaxMap/actions/workflows/release.yml/badge.svg)](https://github.com/NX1X/OpenTaxMap/actions/workflows/release.yml)
+[![Release](https://github.com/NX1X/OpenTaxMap/actions/workflows/release.yml/badge.svg)](https://github.com/NX1X/OpenTaxMap/actions/workflows/release.yml)
 [![Live site](https://img.shields.io/website?url=https%3A%2F%2Ftaxmap.nx1xlab.dev&label=live)](https://taxmap.nx1xlab.dev)
 <br>
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
@@ -59,7 +59,7 @@ public/data/localities.json        one record per locality, benefits keyed by ye
 Rebuild the dataset (requires the `pdftotext` binary from poppler-utils):
 
 ```bash
-pip install -r requirements.txt
+pip install --require-hashes -r scripts/requirements.txt
 npm run data
 ```
 

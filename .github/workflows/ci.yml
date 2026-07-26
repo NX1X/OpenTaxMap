@@ -54,7 +54,7 @@ jobs:
         run: |
           # localities.json and sitemap.xml are generated; fail if a commit
           # forgot to regenerate them after touching data/ or scripts/.
-          python3 -m pip install --quiet --require-hashes -r requirements.txt
+          python3 -m pip install --quiet --require-hashes -r scripts/requirements.txt
           sudo apt-get update && sudo apt-get install -y --no-install-recommends poppler-utils
           # Record the parser version: a poppler bump can silently change
           # `pdftotext -layout` output, which would shift extracted tax rates.

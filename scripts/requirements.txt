@@ -9,10 +9,10 @@
 # requires every installed package to be pinned and hashed.
 #
 # Regenerate after a version bump:
-#   pip download -r requirements.txt -d /tmp/wheels && pip hash /tmp/wheels/*
+#   pip download -r scripts/requirements.txt -d /tmp/wheels && pip hash /tmp/wheels/*
 #   (or use `pip-compile --generate-hashes`)
 #
-# Install: pip install --require-hashes -r requirements.txt
+# Install: pip install --require-hashes -r scripts/requirements.txt
 #
 # System prerequisite (not a Python package): poppler-utils >= 22
 #   provides `pdftotext`, used by scripts/extract_pdf.py
