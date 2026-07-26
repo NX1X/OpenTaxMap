@@ -28,12 +28,17 @@ Live: https://taxmap.nx1xlab.dev
 
 ## Features
 
-- All ~490 eligible localities on one map, color-coded by credit rate (7%-20%)
+- All 536 eligible localities on one map, color-coded by credit rate (7%-20%)
 - Full benefit history per locality (rate + annual income cap, 2016-2026)
 - Search (Hebrew and English names), filters by tax year, sector
   (Jewish / Arab / Druze / mixed), region, sub-region (Upper & Lower Galilee,
   Western Galilee, Golan, Gaza Envelope, Western & Eastern Negev,
   Eilat & Arava, Jordan Valley and more), local authority, and credit rate
+- Benefit calculator, side-by-side comparison (with CSV / JSON export),
+  changes-vs-last-year map mode, nearest-locality with a locate button, and a
+  data & trends view
+- Sharing (WhatsApp / Telegram / X / copy) for the whole site and per locality;
+  per-locality permalinks (`/yishuv/<slug>`)
 - Hebrew (RTL) and English (LTR) interface, light and dark themes
 - Accessibility: WCAG 2.1 AA-oriented - keyboard navigation, screen-reader
   support, accessibility menu (text size, high contrast, reduced motion,
@@ -54,15 +59,16 @@ Web Analytics and the version check first-party. Editable source:
 ## Data pipeline
 
 Source of truth is the Israel Tax Authority's annual deduction booklets
-(`data-sources/tax-map-<year>.pdf`), joined with the CBS locality registry:
+(`data-sources/data-after-filter/tax-map-<year>.pdf`), joined with the CBS
+locality registry:
 
 ```
-data-sources/tax-map-*.pdf
-        │  scripts/extract_pdf.py   (pdftotext + table parsing)
+data-sources/data-after-filter/tax-map-*.pdf
+        │  scripts/extract_pdf.py   (pdftotext + table parsing, 2016-2026)
         ▼
 data/raw/<year>.json               {name, code, rate, cap}
-        │  scripts/build_data.py   (join with data/cbs/bycode2024.xlsx,
-        │                           ITM→WGS84 via pyproj, sector/district,
+        │  scripts/build_data.py   (join with the newest data/cbs/bycode*.xlsx,
+        │                           ITM→WGS84 via pyproj, sector/sub-region,
         ▼                           manual overrides in data/overrides.json)
 public/data/localities.json        one record per locality, benefits keyed by year
 ```

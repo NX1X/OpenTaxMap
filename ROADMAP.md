@@ -53,6 +53,8 @@ Contributions welcome; see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Infrastructure
 
-- [ ] Wire the `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ACCOUNT_ID` secrets so the
-      Release workflow can deploy.
+- [x] **Deploy via Cloudflare Workers Builds** - the site deploys straight from
+      the repo on push to `main`, with no deploy credentials stored in GitHub.
 - [ ] Consider a visual-regression check (Playwright screenshots) in CI.
+- [ ] Per-locality dynamic OpenGraph image at build time (see "Per-locality
+      share card" above).
