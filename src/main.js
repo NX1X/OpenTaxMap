@@ -9,10 +9,12 @@ const params = new URLSearchParams(location.search)
 const stored = (k) => { try { return localStorage.getItem(k) } catch { return null } }
 const store = (k, v) => { try { localStorage.setItem(k, v) } catch { /* private mode */ } }
 // Session-scoped variants. Used for the salary input: it is personal financial
-// data, so it must not outlive the tab. On a shared or public computer,
-// localStorage would pre-fill the previous visitor's salary indefinitely.
-const sessionStored = (k) => { try { return sessionStorage.getItem(k) } catch { return null } }
-const sessionStore = (k, v) => { try { sessionStorage.setItem(k, v) } catch { /* private mode */ } }
+// The salary typed into the benefit calculator is personal financial data and
+// is deliberately never written to localStorage or sessionStorage. It lives in
+// this variable only, so reopening the calculator in the same visit keeps the
+// number, while a reload or a new tab starts clean and nothing is left behind
+// for the next person on a shared or public computer.
+let calcSalary = ''
 
 const state = {
   lang: params.get('lang') || stored('lang') || 'he',
@@ -645,7 +647,7 @@ function buildCalculator(loc) {
   salary.id = 'calc-salary'
   salary.min = '0'
   salary.step = '500'
-  salary.value = sessionStored('calcSalary') || '12000'
+  salary.value = calcSalary || '12000'
   salaryField.append(salaryLabel, salary)
   const pointsField = document.createElement('div')
   pointsField.className = 'field'
@@ -691,7 +693,7 @@ function buildCalculator(loc) {
       p.textContent = line
       out.appendChild(p)
     }
-    sessionStore('calcSalary', salary.value)
+    calcSalary = salary.value
     store('calcPoints', points.value)
   }
   salary.addEventListener('input', recalc)
