@@ -561,6 +561,18 @@ function openDetail(loc, invoker) {
   })
   body.appendChild(compareBtn)
 
+  const shareBtn = document.createElement('button')
+  shareBtn.type = 'button'
+  shareBtn.className = 'link-btn'
+  shareBtn.textContent = `\u{1F517} ${t('shareLocality')}`
+  shareBtn.addEventListener('click', (e) => openShare({
+    title: `${loc.he} - ${t('shareTitle')}`,
+    text: t('shareText'),
+    url: `${location.origin}/yishuv/${loc.slug}`,
+    context: state.lang === 'he' ? loc.he : loc.en,
+  }, e.currentTarget))
+  body.appendChild(shareBtn)
+
   const src = document.createElement('p')
   const a = document.createElement('a')
   a.href = 'https://www.kolzchut.org.il/he/%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%AA%D7%95%D7%A9%D7%91%D7%99%D7%9D_%D7%91%D7%A4%D7%A8%D7%99%D7%A4%D7%A8%D7%99%D7%94'
@@ -806,8 +818,8 @@ function showUserLocation(lat, lng, accuracy) {
   // accuracy halo (clamped so a coarse fix doesn't cover the whole map)
   if (accuracy && accuracy < 20000) {
     L.circle([lat, lng], {
-      radius: accuracy, color: '#1e73e8', weight: 1,
-      fillColor: '#1e73e8', fillOpacity: 0.12, interactive: false,
+      radius: accuracy, color: '#e11d2f', weight: 1,
+      fillColor: '#e11d2f', fillOpacity: 0.12, interactive: false,
     }).addTo(userLayer)
   }
   const icon = L.divIcon({
@@ -1175,16 +1187,57 @@ async function checkVersion() {
 
 // ---------------------------------------------------------------- share
 
-async function shareSite() {
-  const shareData = { title: t('shareTitle'), text: t('shareText'), url: location.origin + '/' }
+function shareChannels({ text, url }) {
+  const msg = `${text} ${url}`
+  return [
+    { key: 'shareWhatsapp', cls: 'wa', href: `https://wa.me/?text=${encodeURIComponent(msg)}` },
+    { key: 'shareTelegram', cls: 'tg', href: `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}` },
+    { key: 'shareX', cls: 'x', href: `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}` },
+  ]
+}
+
+// Unified share: native share sheet where available (mobile -> includes
+// WhatsApp), otherwise a dialog with direct WhatsApp/Telegram/X/Copy actions.
+// Works for the whole site and for a single locality (its permalink).
+async function openShare(payload, invoker) {
   if (navigator.share) {
-    try { await navigator.share(shareData); return } catch { /* cancelled */ return }
+    try { await navigator.share({ title: payload.title, text: payload.text, url: payload.url }); return } catch { return }
   }
-  const status = document.getElementById('nearest-status')
-  try {
-    await navigator.clipboard.writeText(`${shareData.text} ${shareData.url}`)
-    if (status) { status.textContent = t('shareCopied'); setTimeout(() => { status.textContent = '' }, 2500) }
-  } catch { /* clipboard blocked */ }
+  lastFocus = invoker instanceof HTMLElement ? invoker : null
+  document.getElementById('share-context').textContent = payload.context || ''
+  const wrap = document.getElementById('share-channels')
+  wrap.innerHTML = ''
+  for (const ch of shareChannels(payload)) {
+    const a = document.createElement('a')
+    a.href = ch.href
+    a.target = '_blank'
+    a.rel = 'noopener'
+    a.className = `share-channel ${ch.cls}`
+    a.textContent = t(ch.key)
+    wrap.appendChild(a)
+  }
+  const copy = document.createElement('button')
+  copy.type = 'button'
+  copy.className = 'share-channel copy'
+  copy.textContent = t('shareCopyLink')
+  copy.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(`${payload.text} ${payload.url}`)
+      copy.textContent = `✓ ${t('shareCopied')}`
+      setTimeout(() => { copy.textContent = t('shareCopyLink') }, 2000)
+    } catch { /* clipboard blocked */ }
+  })
+  wrap.appendChild(copy)
+  document.getElementById('share-dialog').showModal()
+}
+
+function shareSite(e) {
+  // share the site, preserving the current language/state in the query string
+  openShare({
+    title: t('shareTitle'),
+    text: t('shareText'),
+    url: location.origin + '/' + location.search,
+  }, e && e.currentTarget)
 }
 
 async function boot() {
@@ -1194,6 +1247,12 @@ async function boot() {
   wireDialogs()
   wireControls()
   document.getElementById('share-btn').addEventListener('click', shareSite)
+  const hint = document.getElementById('mobile-hint')
+  if (stored('hintDismissed')) hint.classList.add('dismissed')
+  document.getElementById('mobile-hint-dismiss').addEventListener('click', () => {
+    hint.classList.add('dismissed')
+    store('hintDismissed', '1')
+  })
   renderVersion()
   checkVersion()
   setInterval(checkVersion, 30 * 60 * 1000)

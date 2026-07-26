@@ -29,6 +29,7 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@NX1XLAB" />
     <meta name="twitter:title" content="מפת היישובים המזכים בהטבת מס הכנסה | OpenTaxMap" />
     <meta name="twitter:description" content="כל היישובים המזכים בזיכוי ממס הכנסה לתושבי הפריפריה על מפה אחת: שיעורי הזיכוי, תקרות ההכנסה וההיסטוריה לשנים 2016-2026, עם חיפוש וסינון לפי אזור ומגזר." />
     <meta name="twitter:image" content="https://taxmap.nx1xlab.dev/og.png" />
@@ -108,6 +109,11 @@
         <label><input type="checkbox" id="opt-underline" /> <span data-i18n="underlineLinks"></span></label>
       </div>
     </header>
+
+    <div id="mobile-hint" class="mobile-hint" role="note">
+      <span data-i18n="mobileHint"></span>
+      <button id="mobile-hint-dismiss" type="button" data-i18n-arialabel="close">✕</button>
+    </div>
 
     <main class="layout">
       <aside class="panel" aria-labelledby="filters-heading">
@@ -209,6 +215,15 @@
       </div>
       <div id="stats-body"></div>
       <p class="detail-note" data-i18n="statNote"></p>
+    </dialog>
+
+    <dialog id="share-dialog" class="info-dialog share-dialog" aria-labelledby="share-title">
+      <div class="dialog-head">
+        <h2 id="share-title" data-i18n="shareVia"></h2>
+        <button type="button" class="dialog-close" data-close data-i18n-arialabel="close">✕</button>
+      </div>
+      <p id="share-context" class="share-context"></p>
+      <div id="share-channels" class="share-channels"></div>
     </dialog>
 
     <dialog id="compare-dialog" class="info-dialog compare-dialog" aria-labelledby="compare-title">
