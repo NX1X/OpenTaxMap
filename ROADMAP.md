@@ -3,10 +3,6 @@
 Ideas and planned work for OpenTaxMap. Not commitments or dates - a backlog.
 Contributions welcome; see [CONTRIBUTING.md](CONTRIBUTING.md).
 
-For the detailed, working-level status board (backlog / in progress / done,
-with notes and acceptance criteria) see
-[docs-internal/work-status.md](docs-internal/work-status.md).
-
 ## Data
 
 - [x] **Historical expansion 2016-2026** - per-locality table years extracted

@@ -8,6 +8,32 @@ Hebrew version: [CHANGELOG.he.md](CHANGELOG.he.md).
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-07-26
+
+### Added
+
+- Sharing. On mobile this opens the phone's own share sheet; elsewhere it opens
+  a dialog with WhatsApp, Telegram, X, and a copy-link button. The header button
+  shares the site and keeps your current language; each locality card also has
+  its own share button that shares that locality's permalink.
+- A clearer "you are here" marker: the location dot is now red so it stands out
+  from the blue locality markers.
+- A dismissible note on small screens suggesting a desktop or a landscape tablet
+  for the full set of filters.
+
+### Changed
+
+- Rewrote the share message so it encourages passing the map on, helping more
+  periphery residents discover a credit many do not know they are owed.
+- Single logo mark across the project, and a refreshed social preview image.
+- Social link previews attribute to the @NX1XLAB account.
+
+### Fixed
+
+- On phones the filters and the locality list were pushed off-screen behind the
+  map, so only the map was visible; the page now scrolls and every option is
+  reachable.
+
 ## [0.1.1] - 2026-07-26
 
 ### Fixed
@@ -60,6 +86,7 @@ First public version.
 - Supply chain locked down: pinned dependencies with verified hashes, pinned CI
   actions, and automated dependency, secret, and code scanning.
 
-[Unreleased]: https://github.com/NX1X/OpenTaxMap/compare/v0.1.1...HEAD
+[Unreleased]: https://github.com/NX1X/OpenTaxMap/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/NX1X/OpenTaxMap/compare/v0.1.1...v0.2.0
 [0.1.1]: https://github.com/NX1X/OpenTaxMap/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/NX1X/OpenTaxMap/releases/tag/v0.1.0
