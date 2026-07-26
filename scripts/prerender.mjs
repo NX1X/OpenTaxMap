@@ -16,7 +16,9 @@ let shell = readFileSync(join(dist, 'index.html'), 'utf8')
 const data = JSON.parse(readFileSync(join(dist, 'data', 'localities.json'), 'utf8'))
 
 // Cloudflare Web Analytics beacon, proxied first-party by src/worker.js.
-// Injected only when a public site token is provided at build time.
+// The public site token is provided at build time via CF_ANALYTICS_TOKEN (set
+// as a build variable in Cloudflare Workers Builds), so it is not committed to
+// the repo. With no token set, no beacon is injected.
 const cfToken = process.env.CF_ANALYTICS_TOKEN || ''
 if (cfToken) {
   const beacon = `<script defer src="/cf/beacon.js" data-cf-beacon='{"token":"${cfToken}","send":{"to":"/cf/rum"}}'></script>`

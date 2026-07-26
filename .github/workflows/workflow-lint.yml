@@ -10,11 +10,13 @@ on:
     paths:
       - ".github/workflows/**"
       - ".github/actionlint.yaml"
+      - ".github/zizmor-requirements.txt"
   pull_request:
     branches: [main]
     paths:
       - ".github/workflows/**"
       - ".github/actionlint.yaml"
+      - ".github/zizmor-requirements.txt"
 
 permissions:
   contents: read
@@ -26,7 +28,6 @@ concurrency:
 env:
   ACTIONLINT_VERSION: "1.7.12"
   ACTIONLINT_SHA256: "8aca8db96f1b94770f1b0d72b6dddcb1ebb8123cb3712530b08cc387b349a3d8"
-  ZIZMOR_VERSION: "1.28.0"
 
 jobs:
   lint:
@@ -59,8 +60,10 @@ jobs:
         with:
           python-version: "3.13"
 
+      # Hash-pinned via .github/zizmor-requirements.txt so a substituted
+      # artifact is rejected, not just an unexpected version.
       - name: Install zizmor
-        run: python3 -m pip install --quiet "zizmor==${ZIZMOR_VERSION}"
+        run: python3 -m pip install --quiet --require-hashes -r .github/zizmor-requirements.txt
 
       - name: Run zizmor
         run: zizmor --persona=regular .github/workflows/

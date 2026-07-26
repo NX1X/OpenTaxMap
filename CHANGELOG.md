@@ -13,11 +13,18 @@ Hebrew version: [CHANGELOG.he.md](CHANGELOG.he.md).
 ### Added
 
 - A "center on my location" button on the map, next to the zoom control.
+- Privacy-friendly, cookieless Cloudflare Web Analytics, served first-party.
 
 ### Changed
 
 - The "you are here" marker is now a larger red pin, clearly distinct from the
   blue locality markers.
+
+### Security
+
+- The salary entered in the benefit calculator is now remembered only for the
+  current browsing session instead of being kept indefinitely, so it is no
+  longer pre-filled for the next person on a shared or public computer.
 
 ## [0.2.0] - 2026-07-26
 
@@ -97,7 +104,8 @@ First public version.
 - Supply chain locked down: pinned dependencies with verified hashes, pinned CI
   actions, and automated dependency, secret, and code scanning.
 
-[Unreleased]: https://github.com/NX1X/OpenTaxMap/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/NX1X/OpenTaxMap/compare/v0.2.1...HEAD
+[0.2.1]: https://github.com/NX1X/OpenTaxMap/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/NX1X/OpenTaxMap/compare/v0.1.1...v0.2.0
 [0.1.1]: https://github.com/NX1X/OpenTaxMap/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/NX1X/OpenTaxMap/releases/tag/v0.1.0
