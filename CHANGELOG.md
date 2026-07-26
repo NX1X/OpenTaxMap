@@ -13,6 +13,7 @@ Hebrew version: [CHANGELOG.he.md](CHANGELOG.he.md).
 ### Added
 
 - A "center on my location" button on the map, next to the zoom control.
+- Privacy-friendly, cookieless Cloudflare Web Analytics, served first-party.
 
 ### Changed
 

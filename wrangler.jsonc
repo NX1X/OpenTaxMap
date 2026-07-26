@@ -24,11 +24,14 @@
     }
   ],
 
-  // Workers Logs: capture console output, exceptions, and invocation metadata,
-  // viewable in the dashboard and via `wrangler tail`. Traffic is low, so log
-  // every request (head_sampling_rate 1 = 100%); lower it if volume grows.
+  // Workers Logs only. This captures console output, exceptions, and
+  // invocation metadata (viewable in the dashboard and via `wrangler tail`).
+  // Traffic is low, so log every request (head_sampling_rate 1 = 100%); lower
+  // it if volume grows. Distributed Traces are a separate feature and are NOT
+  // enabled here - a single 3-route worker gets no benefit from them.
   "observability": {
     "enabled": true,
-    "head_sampling_rate": 1
+    "head_sampling_rate": 1,
+    "logs": { "enabled": true }
   }
 }
