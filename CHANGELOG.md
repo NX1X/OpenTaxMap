@@ -8,6 +8,17 @@ Hebrew version: [CHANGELOG.he.md](CHANGELOG.he.md).
 
 ## [Unreleased]
 
+## [0.2.1] - 2026-07-26
+
+### Added
+
+- A "center on my location" button on the map, next to the zoom control.
+
+### Changed
+
+- The "you are here" marker is now a larger red pin, clearly distinct from the
+  blue locality markers.
+
 ## [0.2.0] - 2026-07-26
 
 ### Added

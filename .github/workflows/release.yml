@@ -90,11 +90,34 @@ jobs:
           RELEASE_VERSION: ${{ inputs.version }}
           TARGET_SHA: ${{ github.sha }}
         run: |
+          set -euo pipefail
           if ! printf '%s' "$RELEASE_VERSION" | grep -Eq '^v[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.-]+)?$'; then
             echo "::error::Invalid release tag '$RELEASE_VERSION'. Expected vMAJOR.MINOR.PATCH."
             exit 1
           fi
+          VERSION_NUM="${RELEASE_VERSION#v}"
+
+          # package.json is the single source of truth: the tag must match it.
+          PKG_VERSION="$(node -p "require('./package.json').version")"
+          if [ "$PKG_VERSION" != "$VERSION_NUM" ]; then
+            echo "::error::Tag $RELEASE_VERSION does not match package.json version $PKG_VERSION."
+            exit 1
+          fi
+
+          # Release notes come from the matching CHANGELOG.md section.
+          awk -v ver="## [$VERSION_NUM]" '
+            index($0, ver) == 1 { grab = 1; next }
+            grab && /^## \[/    { exit }
+            grab               { print }
+          ' CHANGELOG.md > notes.md
+          # trim leading/trailing blank lines
+          sed -i -e '/./,$!d' notes.md
+          if [ ! -s notes.md ]; then
+            echo "::error::No CHANGELOG.md section found for $VERSION_NUM. Add one before releasing."
+            exit 1
+          fi
+
           gh release create "$RELEASE_VERSION" \
             --target "$TARGET_SHA" \
             --title "$RELEASE_VERSION" \
-            --generate-notes
+            --notes-file notes.md

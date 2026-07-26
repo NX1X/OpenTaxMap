@@ -40,6 +40,17 @@ Live: https://taxmap.nx1xlab.dev
   underlined links), full text list alongside the map
 - Shareable URLs - filters and language are reflected in query parameters
 
+## Architecture
+
+![OpenTaxMap architecture](design/architecture.png)
+
+An offline data pipeline turns the Tax Authority booklets into
+`localities.json`, which is committed to the repo. On push to `main`,
+Cloudflare Workers Builds runs the Vite build (with per-locality prerendering)
+and deploys a single Cloudflare Worker that serves the static SPA and proxies
+Web Analytics and the version check first-party. Editable source:
+[design/architecture.drawio](design/architecture.drawio).
+
 ## Data pipeline
 
 Source of truth is the Israel Tax Authority's annual deduction booklets

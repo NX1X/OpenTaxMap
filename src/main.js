@@ -321,11 +321,29 @@ function initMap() {
     map.invalidateSize()
     map.fitBounds(DATA_BOUNDS, { padding: [12, 12] })
   })
+  const corner = state.lang === 'he' ? 'topleft' : 'topright'
   L.control.zoom({
-    position: state.lang === 'he' ? 'topleft' : 'topright',
+    position: corner,
     zoomInTitle: t('zoomIn'),
     zoomOutTitle: t('zoomOut'),
   }).addTo(map)
+  // "center on my location" button, under the zoom control
+  const LocateControl = L.Control.extend({
+    options: { position: corner },
+    onAdd() {
+      const c = L.DomUtil.create('div', 'leaflet-bar leaflet-control locate-control')
+      const a = L.DomUtil.create('a', '', c)
+      a.href = '#'
+      a.setAttribute('role', 'button')
+      a.title = t('locateMe')
+      a.setAttribute('aria-label', t('locateMe'))
+      a.innerHTML = '<span aria-hidden="true">◎</span>'
+      L.DomEvent.on(a, 'click', L.DomEvent.stop)
+      L.DomEvent.on(a, 'click', locateAndCenter)
+      return c
+    },
+  })
+  map.addControl(new LocateControl())
   setBasemap()
   markerLayer = L.layerGroup().addTo(map)
   map.on('zoomend', () => {
@@ -824,12 +842,29 @@ function showUserLocation(lat, lng, accuracy) {
   }
   const icon = L.divIcon({
     className: 'user-loc-marker',
-    html: '<span class="user-loc-dot" aria-hidden="true"></span>',
-    iconSize: [18, 18], iconAnchor: [9, 9],
+    html: '<span class="user-loc-pulse" aria-hidden="true"></span>'
+      + '<svg class="user-loc-pin" viewBox="0 0 24 34" width="32" height="45" aria-hidden="true">'
+      + '<path d="M12 0C5.37 0 0 5.37 0 12c0 9 12 22 12 22s12-13 12-22C24 5.37 18.63 0 12 0z" fill="#e11d2f" stroke="#fff" stroke-width="2.5"/>'
+      + '<circle cx="12" cy="12" r="4.5" fill="#fff"/></svg>',
+    iconSize: [32, 45], iconAnchor: [16, 45],
   })
-  L.marker([lat, lng], { icon, keyboard: false, title: t('youAreHere'), alt: t('youAreHere') })
+  L.marker([lat, lng], { icon, keyboard: false, title: t('youAreHere'), alt: t('youAreHere'), zIndexOffset: 1000 })
     .addTo(userLayer)
-    .bindTooltip(t('youAreHere'), { direction: 'top' })
+    .bindTooltip(t('youAreHere'), { direction: 'top', offset: [0, -40] })
+}
+
+// Center the map on the user's location and drop the "you are here" pin.
+function locateAndCenter() {
+  const status = document.getElementById('nearest-status')
+  if (!navigator.geolocation) { status.textContent = t('nearestDenied'); return }
+  status.textContent = t('locating')
+  navigator.geolocation.getCurrentPosition((pos) => {
+    const { latitude, longitude, accuracy } = pos.coords
+    if (!ISRAEL_BOUNDS.contains([latitude, longitude])) { status.textContent = t('nearestDenied'); return }
+    showUserLocation(latitude, longitude, accuracy)
+    map.setView([latitude, longitude], 13)
+    status.textContent = ''
+  }, () => { status.textContent = t('nearestDenied') }, { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 })
 }
 
 function findNearest(invoker) {

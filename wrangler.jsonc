@@ -22,5 +22,13 @@
       "pattern": "taxmap.nx1xlab.dev",
       "custom_domain": true
     }
-  ]
+  ],
+
+  // Workers Logs: capture console output, exceptions, and invocation metadata,
+  // viewable in the dashboard and via `wrangler tail`. Traffic is low, so log
+  // every request (head_sampling_rate 1 = 100%); lower it if volume grows.
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  }
 }
