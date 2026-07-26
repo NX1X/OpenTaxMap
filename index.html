@@ -14,6 +14,13 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="theme-color" content="#184f95" />
 
+    <!-- Preconnect to the tile origins used for the default (Hebrew) map
+         view - Israel Hiking Map overlay on a CARTO light_nolabels base -
+         so the LCP tile request doesn't pay DNS/TLS setup cost cold.
+         Kept to 2 origins; both already allowed in img-src (public/_headers). -->
+    <link rel="preconnect" href="https://israelhiking.osm.org.il" crossorigin />
+    <link rel="preconnect" href="https://a.basemaps.cartocdn.com" crossorigin />
+
     <!-- OpenGraph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="OpenTaxMap" />
@@ -83,14 +90,14 @@
     <header class="site-header">
       <div class="header-title">
         <h1 id="site-title" data-i18n="siteName">מפת היישובים המזכים בהטבת מס הכנסה</h1>
-        <p class="tagline" data-i18n="tagline"></p>
+        <p class="tagline" data-i18n="tagline">זיכוי ממס הכנסה לתושבי הפריפריה - כל היישובים המוטבים על מפה אחת, לשנים 2016-2026</p>
       </div>
       <div class="header-controls" role="group" aria-label="הגדרות תצוגה">
         <a id="github-link" class="control-btn icon-btn" href="https://github.com/NX1X/OpenTaxMap" target="_blank" rel="noopener" data-i18n-arialabel="githubRepo">
           <svg viewBox="0 0 16 16" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
         </a>
-        <button id="share-btn" class="control-btn labeled-btn share-cta" type="button" data-i18n-arialabel="share" title=""><span aria-hidden="true">🔗</span> <span class="btn-label" data-i18n="share"></span></button>
-        <button id="stats-open" class="control-btn labeled-btn" type="button" data-i18n-arialabel="stats" title=""><span aria-hidden="true">📊</span> <span class="btn-label" data-i18n="stats"></span></button>
+        <button id="share-btn" class="control-btn labeled-btn share-cta" type="button" data-i18n-arialabel="share" title=""><span aria-hidden="true">🔗</span> <span class="btn-label" data-i18n="share">שיתוף</span></button>
+        <button id="stats-open" class="control-btn labeled-btn" type="button" data-i18n-arialabel="stats" title=""><span aria-hidden="true">📊</span> <span class="btn-label" data-i18n="stats">נתונים ומגמות</span></button>
         <button id="lang-toggle" class="control-btn" type="button" data-i18n="langToggle" data-i18n-arialabel="langToggleLabel"></button>
         <button id="theme-toggle" class="control-btn" type="button" data-i18n-arialabel="themeToggle" aria-pressed="false">◐</button>
         <button id="a11y-toggle" class="control-btn" type="button" data-i18n-arialabel="a11yMenu" aria-expanded="false" aria-controls="a11y-menu">♿</button>
@@ -111,7 +118,7 @@
     </header>
 
     <div id="mobile-hint" class="mobile-hint" role="note">
-      <span data-i18n="mobileHint"></span>
+      <span data-i18n="mobileHint">לצפייה נוחה יותר עם כל אפשרויות הסינון, מומלץ להשתמש במחשב או בטאבלט (לרוחב).</span>
       <button id="mobile-hint-dismiss" type="button" data-i18n-arialabel="close">✕</button>
     </div>
 
@@ -120,7 +127,7 @@
         <h2 id="filters-heading" class="visually-hidden" data-i18n="filters"></h2>
 
         <div class="field">
-          <label for="search" data-i18n="search"></label>
+          <label for="search" data-i18n="search">חיפוש יישוב</label>
           <div class="search-row">
             <input id="search" type="search" autocomplete="off" data-i18n-placeholder="searchPlaceholder" />
             <button id="nearest-btn" type="button" class="control-btn" data-i18n-arialabel="nearest" title="">📍</button>
@@ -130,11 +137,11 @@
 
         <div class="field-row">
           <div class="field">
-            <label for="year" data-i18n="year"></label>
+            <label for="year" data-i18n="year">שנת מס</label>
             <select id="year"></select>
           </div>
           <div class="field">
-            <label for="sector" data-i18n="sector"></label>
+            <label for="sector" data-i18n="sector">מגזר</label>
             <select id="sector">
               <option value="" data-i18n="sectorAll"></option>
               <option value="jewish" data-i18n="sectorJewish"></option>
@@ -147,7 +154,7 @@
 
         <div class="field-row">
           <div class="field">
-            <label for="district" data-i18n="district"></label>
+            <label for="district" data-i18n="district">אזור</label>
             <select id="district">
               <option value="" data-i18n="districtAll"></option>
               <option value="north" data-i18n="districtNorth"></option>
@@ -156,7 +163,7 @@
             </select>
           </div>
           <div class="field">
-            <label for="subregion" data-i18n="subregion"></label>
+            <label for="subregion" data-i18n="subregion">תת-אזור</label>
             <select id="subregion">
               <option value="" data-i18n="subregionAll"></option>
             </select>
@@ -165,7 +172,7 @@
 
         <div class="field-row">
           <div class="field">
-            <label for="council" data-i18n="council"></label>
+            <label for="council" data-i18n="council">מועצה אזורית / רשות</label>
             <select id="council">
               <option value="" data-i18n="councilAll"></option>
             </select>
@@ -173,11 +180,11 @@
         </div>
 
         <fieldset class="legend-filter">
-          <legend data-i18n="legend"></legend>
+          <legend data-i18n="legend">מקרא - שיעור זיכוי</legend>
           <div id="legend-chips" class="legend-chips"></div>
         </fieldset>
 
-        <label class="changes-toggle"><input type="checkbox" id="changes-mode" /> <span id="changes-mode-label"></span></label>
+        <label class="changes-toggle"><input type="checkbox" id="changes-mode" /> <span id="changes-mode-label">הצגת שינויים לעומת 2025</span></label>
 
         <div class="results-bar">
           <p id="results-count" role="status" aria-live="polite"></p>

@@ -226,7 +226,9 @@ input[type='search'], select {
 
 .legend-filter { border: 0; margin: 0; padding: 0; }
 .legend-filter legend { font-size: 0.82rem; color: var(--text-secondary); padding-block-end: 0.3rem; }
-.legend-chips { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+/* reserve two rows so the chips (rendered by JS after data loads) do not
+   expand from zero height and shift the panel (CLS) */
+.legend-chips { display: flex; flex-wrap: wrap; gap: 0.35rem; min-height: 4.4rem; align-content: flex-start; }
 .legend-chips button {
   font: inherit;
   font-size: 0.82rem;

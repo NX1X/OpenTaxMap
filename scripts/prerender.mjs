@@ -36,6 +36,24 @@ const esc = (s) => String(s)
   // double it so escaped content is inserted literally
   .replaceAll('$', '$$$$')
 
+// Safely serialize a JSON-LD object for embedding inside a <script> tag.
+// Escapes '<', '>', '&' as unicode so the payload can never terminate the
+// surrounding </script> tag, and doubles '$' for use as a replacement string.
+const toLdJson = (obj) => {
+  // Sanity check: throws at build time if we ever construct something that
+  // isn't valid JSON (defensive - JSON.stringify output is always valid
+  // JSON, but re-parsing catches programmer error early and loudly).
+  const json = JSON.stringify(obj, null, 2)
+  JSON.parse(json)
+  return json
+    .replaceAll('<', '\\u003c')
+    .replaceAll('>', '\\u003e')
+    .replaceAll('&', '\\u0026')
+    .replaceAll('$', '$$$$')
+}
+
+const ldJsonBlockRe = /<script type="application\/ld\+json">[\s\S]*?<\/script>/
+
 const latestYear = String(Math.max(...data.years))
 let count = 0
 
@@ -49,6 +67,52 @@ for (const loc of data.localities) {
   const desc = `${loc.he} (${loc.en}) - יישוב מוטב: ${rateText}. שיעורי הזיכוי ותקרות ההכנסה לשנים ${data.years[0]}-${data.years[data.years.length - 1]}, על מפה אינטראקטיבית.`
   const url = `${base}/yishuv/${loc.slug}`
 
+  // Per-locality JSON-LD. This replaces the site-wide WebSite+Dataset graph
+  // on every /yishuv/<slug> page with a graph naming THIS locality
+  // specifically (WebPage + BreadcrumbList + Place). Google's Rich Results
+  // auto-detects a "Product" out of the price-like rate/cap figures on
+  // these pages when there's no other clear named entity for it to key
+  // off of; giving each page its own valid, locality-named structured data
+  // gives Google something unambiguous to classify the page as (a content
+  // page about a place), which is the fix for the "Product snippet -
+  // missing offers/review/aggregateRating/name" Search Console errors.
+  // We deliberately do NOT add Product/Offer markup - this is not a store.
+  const localityLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebSite',
+        name: 'מפת היישובים המזכים בהטבת מס הכנסה',
+        alternateName: 'OpenTaxMap',
+        url: `${base}/`,
+        inLanguage: ['he', 'en'],
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'OpenTaxMap', item: `${base}/` },
+          { '@type': 'ListItem', position: 2, name: loc.he, item: url },
+        ],
+      },
+      {
+        '@type': 'WebPage',
+        name: title,
+        description: desc,
+        url,
+        inLanguage: 'he',
+        isPartOf: { '@type': 'WebSite', url: `${base}/` },
+        about: {
+          '@type': 'Place',
+          name: loc.he,
+          alternateName: loc.en,
+          address: { '@type': 'PostalAddress', addressCountry: 'IL' },
+          geo: { '@type': 'GeoCoordinates', latitude: loc.lat, longitude: loc.lng },
+        },
+      },
+    ],
+  }
+  const ldScriptTag = `<script type="application/ld+json">\n${toLdJson(localityLd)}\n    </script>`
+
   let html = shell
     .replace(/<title>[^<]*<\/title>/, `<title>${esc(title)}</title>`)
     .replace(/(<meta name="description" content=")[^"]*(")/, `$1${esc(desc)}$2`)
@@ -58,6 +122,7 @@ for (const loc of data.localities) {
     .replace(/(<meta property="og:url" content=")[^"]*(")/, `$1${esc(url)}$2`)
     .replace(/(<meta name="twitter:title" content=")[^"]*(")/, `$1${esc(title)}$2`)
     .replace(/(<meta name="twitter:description" content=")[^"]*(")/, `$1${esc(desc)}$2`)
+    .replace(ldJsonBlockRe, ldScriptTag)
 
   const outDir = join(dist, 'yishuv', loc.slug)
   mkdirSync(outDir, { recursive: true })
