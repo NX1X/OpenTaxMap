@@ -23,8 +23,7 @@
     "enabled": true,
     "labels": ["security", "dependencies"],
     "minimumReleaseAge": null,
-    "schedule": ["at any time"],
-    "prPriority": 10
+    "schedule": ["at any time"]
   },
   "packageRules": [
     {
