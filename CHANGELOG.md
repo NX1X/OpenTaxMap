@@ -8,6 +8,8 @@ Hebrew version: [CHANGELOG.he.md](CHANGELOG.he.md).
 
 ## [Unreleased]
 
+## [0.2.3] - 2026-07-26
+
 ### Security
 
 - Hardened the edge Worker after a penetration test of the live site: the
@@ -125,7 +127,8 @@ First public version.
 - Supply chain locked down: pinned dependencies with verified hashes, pinned CI
   actions, and automated dependency, secret, and code scanning.
 
-[Unreleased]: https://github.com/NX1X/OpenTaxMap/compare/v0.2.2...HEAD
+[Unreleased]: https://github.com/NX1X/OpenTaxMap/compare/v0.2.3...HEAD
+[0.2.3]: https://github.com/NX1X/OpenTaxMap/compare/v0.2.2...v0.2.3
 [0.2.2]: https://github.com/NX1X/OpenTaxMap/compare/v0.2.1...v0.2.2
 [0.2.1]: https://github.com/NX1X/OpenTaxMap/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/NX1X/OpenTaxMap/compare/v0.1.1...v0.2.0
