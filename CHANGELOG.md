@@ -8,6 +8,13 @@ Hebrew version: [CHANGELOG.he.md](CHANGELOG.he.md).
 
 ## [Unreleased]
 
+### Security
+
+- Hardened the edge Worker after a penetration test of the live site: the
+  analytics collector now has a per-IP rate limit, the version endpoint only
+  answers GET requests and is properly cached, and the Worker's own responses
+  carry the same security headers as the rest of the site.
+
 ## [0.2.2] - 2026-07-26
 
 ### Fixed
