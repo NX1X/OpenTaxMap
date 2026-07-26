@@ -7,6 +7,23 @@
   "name": "opentaxmap",
   "compatibility_date": "2026-07-01",
   "main": "src/worker.js",
+
+  // Do NOT also expose this Worker at <name>.<account>.workers.dev. That URL
+  // would run the same code while bypassing every zone-scoped control on
+  // nx1xlab.dev (security-header rules, WAF, cache rules), including the
+  // unauthenticated /cf/rum write path. Only the custom domain below is served.
+  "workers_dev": false,
+
+  // Per-IP rate limiter for the unauthenticated /cf/rum collector. Native to
+  // Workers, so it does not consume a zone WAF rate-limiting rule. period must
+  // be 10 or 60; namespace_id is any positive integer unique in the account.
+  "ratelimits": [
+    {
+      "name": "RUM_LIMITER",
+      "namespace_id": "1001",
+      "simple": { "limit": 100, "period": 60 }
+    }
+  ],
   "assets": {
     "directory": "./dist",
     "binding": "ASSETS",
