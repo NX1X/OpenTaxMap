@@ -1137,7 +1137,7 @@ function update() {
 
 // ---------------------------------------------------------------- version
 
-const APP_VERSION = typeof __APP_VERSION__ !== 'undefined' ? __APP_VERSION__ : '0.1.0'
+const APP_VERSION = typeof __APP_VERSION__ !== 'undefined' ? __APP_VERSION__ : '0.1.1'
 let latestVersion = null
 
 function cmpVersions(a, b) {

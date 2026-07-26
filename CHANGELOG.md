@@ -8,6 +8,22 @@ Hebrew version: [CHANGELOG.he.md](CHANGELOG.he.md).
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-07-26
+
+### Fixed
+
+- Per-locality pages are served directly at `/yishuv/<slug>` instead of
+  redirecting to a trailing-slash URL, matching the canonical tags and every
+  sitemap entry.
+- Removed a leftover redirect rule that prevented the site from deploying.
+
+### Changed
+
+- The site is deployed by Cloudflare Workers Builds directly from this
+  repository, so no deploy credentials are stored in GitHub at all.
+- Node 22 is now required (see `.nvmrc`).
+- The Python data-pipeline requirements moved to `scripts/requirements.txt`.
+
 ## [0.1.0] - 2026-07-25
 
 First public version.
@@ -44,5 +60,6 @@ First public version.
 - Supply chain locked down: pinned dependencies with verified hashes, pinned CI
   actions, and automated dependency, secret, and code scanning.
 
-[Unreleased]: https://github.com/NX1X/OpenTaxMap/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/NX1X/OpenTaxMap/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/NX1X/OpenTaxMap/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/NX1X/OpenTaxMap/releases/tag/v0.1.0
