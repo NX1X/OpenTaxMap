@@ -8,7 +8,7 @@
   ],
   "enabledManagers": ["npm", "pip_requirements", "github-actions"],
   "timezone": "Asia/Jerusalem",
-  "schedule": ["before 8am on monday"],
+  "schedule": ["before 8am"],
   "minimumReleaseAge": "14 days",
   "internalChecksFilter": "strict",
   "prConcurrentLimit": 3,
