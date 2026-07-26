@@ -37,3 +37,6 @@ docs-internal/
 CLAUDE.md
 **/CLAUDE.md
 CLAUDE.local.md
+
+# Editor
+.vscode/

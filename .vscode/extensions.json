@@ -1,7 +1,0 @@
-{
-  "recommendations": [
-    "snyk.snyk-vulnerability-scanner",
-    "ms-python.python",
-    "redhat.vscode-yaml"
-  ]
-}
