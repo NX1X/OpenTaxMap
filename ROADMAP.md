@@ -38,16 +38,22 @@ Contributions welcome; see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Platform
 
+- [ ] **v0.3.0 - self-hosted vector basemap (Protomaps + MapLibre)** - replace
+      the Leaflet + Israel Hiking Map basemap (cluttered, shows the green line)
+      with a self-hosted Protomaps PMTiles basemap rendered by MapLibre GL. The
+      style is authored in-house: a clean map (places, roads, water), **no
+      boundaries layer**, labels that follow the UI language (Hebrew `name:he`
+      in the Hebrew site, English `name:en` in the English site, RTL text
+      plugin for correct Hebrew shaping). Includes an **Area A/B/C overlay**
+      layer. The tile file is served first-party from Cloudflare R2 (no 25 MiB
+      Workers-asset cap; range requests supported). Feasibility proven with a
+      working prototype. This supersedes the GovMap and keyed-basemap items
+      below, which are no longer needed (GovMap access was not granted after a
+      week). Remaining work: MapLibre migration (markers, popups, locate,
+      language switch), self-host glyphs, source the Area A/B/C GeoJSON, build
+      and upload the Israel PMTiles to R2, `worker-src blob:` CSP addition.
 - [ ] **PWA / offline** - installable, works offline (the dataset is tiny),
       app icon on mobile.
-- [ ] **GovMap basemap (migration)** - once a domain-bound GovMap API token is
-      granted for `taxmap.nx1xlab.dev`, migrate the map engine from Leaflet to
-      the GovMap JS SDK (OpenLayers-based) to use the official Israeli
-      government basemap. Gated on the token; direct tile embedding is not
-      permitted. Until then the Hebrew basemap is Israel Hiking Map.
-- [ ] **Optional keyed basemap** - a MapTiler/Mapbox layer for fully
-      localized labels at every zoom (current free tiles romanize only major
-      places in English; Hebrew via OSM is fully local).
 - [ ] **Full accessibility + performance audit** - complete the automated
       a11y/perf/SEO sweep before a public launch.
 
