@@ -15,19 +15,11 @@ const base = 'https://taxmap.nx1xlab.dev'
 let shell = readFileSync(join(dist, 'index.html'), 'utf8')
 const data = JSON.parse(readFileSync(join(dist, 'data', 'localities.json'), 'utf8'))
 
-// Cloudflare Web Analytics beacon, proxied first-party by src/worker.js.
-// The public site token is provided at build time via CF_ANALYTICS_TOKEN (set
-// as a build variable in Cloudflare Workers Builds), so it is not committed to
-// the repo. With no token set, no beacon is injected.
-const cfToken = process.env.CF_ANALYTICS_TOKEN || ''
-if (cfToken) {
-  const beacon = `<script defer src="/cf/beacon.js" data-cf-beacon='{"token":"${cfToken}","send":{"to":"/cf/rum"}}'></script>`
-  shell = shell.replace('</head>', `  ${beacon}\n  </head>`)
-  writeFileSync(join(dist, 'index.html'), shell)
-  console.log('injected Cloudflare Web Analytics beacon')
-} else {
-  console.log('no CF_ANALYTICS_TOKEN set - analytics beacon not injected')
-}
+// Vercel Analytics, served same-origin at /_vercel/insights/script.js.
+const analytics = '<script defer src="/_vercel/insights/script.js"></script>'
+shell = shell.replace('</head>', `  ${analytics}\n  </head>`)
+writeFileSync(join(dist, 'index.html'), shell)
+console.log('injected Vercel Analytics')
 
 const esc = (s) => String(s)
   .replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
