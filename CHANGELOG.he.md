@@ -4,6 +4,22 @@
 
 ## [לא פורסם]
 
+### שונה
+
+- הועברה האירוח מ-Cloudflare Workers ל-Vercel. כותרות תגובה, מטמון והפנייה
+  לאפליקציית העמוד היחיד מוגדרות כעת ב-`vercel.json` במקום ב-`wrangler.jsonc`
+  וב-`public/_headers`
+- `GET /api/version` הוא כעת Vercel Function (‏`api/version.mjs`) במקום נתיב
+  בתוך ה-Worker של Cloudflare
+- הוחלף פרוקסי האנליטיקס של Cloudflare Web Analytics ב-Vercel Analytics,
+  המוגש מאותו המקור (same-origin)
+
+### הוסר
+
+- `/cf/beacon.js` ו-`/cf/rum`, נתיבי הפרוקסי לאנליטיקס, יחד עם הגבלת הקצב
+  `RUM_LIMITER`. זה היה נתיב הכתיבה היחיד ללא אימות באתר
+- `wrangler.jsonc`, `src/worker.js`
+
 ## [0.2.3] - 26.07.2026
 
 ### אבטחה
