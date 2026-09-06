@@ -34,3 +34,5 @@ CLAUDE.local.md
 
 # Editor
 .vscode/
+.vercel
+.env*

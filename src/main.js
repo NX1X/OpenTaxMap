@@ -1,7 +1,10 @@
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import './style.css'
+import { inject } from '@vercel/analytics'
 import { STRINGS, makeT } from './i18n.js'
+
+inject()
 
 // ---------------------------------------------------------------- state
 

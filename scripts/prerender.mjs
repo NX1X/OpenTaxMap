@@ -12,14 +12,12 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const dist = join(root, 'dist')
 const base = 'https://taxmap.nx1xlab.dev'
 
-let shell = readFileSync(join(dist, 'index.html'), 'utf8')
+const shell = readFileSync(join(dist, 'index.html'), 'utf8')
 const data = JSON.parse(readFileSync(join(dist, 'data', 'localities.json'), 'utf8'))
 
-// Vercel Analytics, served same-origin at /_vercel/insights/script.js.
-const analytics = '<script defer src="/_vercel/insights/script.js"></script>'
-shell = shell.replace('</head>', `  ${analytics}\n  </head>`)
-writeFileSync(join(dist, 'index.html'), shell)
-console.log('injected Vercel Analytics')
+// Vercel Analytics is bundled into the client entry (src/main.js's inject()
+// call), so it ships in the JS chunk every page loads, including this shell
+// and all 536 prerendered locality pages below. No HTML injection needed.
 
 const esc = (s) => String(s)
   .replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
