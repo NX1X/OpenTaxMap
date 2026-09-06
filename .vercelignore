@@ -1,0 +1,4 @@
+# Not read by `npm run build` (a fully offline npm-only step); kept out of
+# the build context to avoid clone-time cost on every deploy.
+data-sources/
+design/

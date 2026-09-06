@@ -2,9 +2,9 @@ name: Release
 
 # Manual trigger. Verifies the build, then tags a GitHub release.
 #
-# This workflow does NOT deploy. The site is deployed by Cloudflare Workers
-# Builds, which pulls this repository directly and builds on push to main.
-# That means no Cloudflare credentials exist in GitHub at all, and branch
+# This workflow does NOT deploy. The site is deployed by Vercel's Git
+# integration, which pulls this repository directly and builds on push to
+# main. That means no deploy credentials exist in GitHub at all, and branch
 # protection on main is what gates production.
 #
 # The work is split so no job holds more privilege than it needs:

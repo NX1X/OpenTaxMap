@@ -1,11 +1,10 @@
 # Security Policy
 
-OpenTaxMap is a static site with no user accounts and no database. It is served
-by a thin Cloudflare Worker (`src/worker.js`) that delivers the static assets
-and, when a site token is configured, proxies cookieless Cloudflare Web
-Analytics first-party so the Content-Security-Policy can stay at `'self'`. No
-personal data is collected or stored, and there is no server-side logging of
-visitor data.
+OpenTaxMap is a static site with no user accounts and no database, deployed
+on Vercel. One Vercel Function (`api/version.mjs`) serves a version check;
+analytics is Vercel Analytics, served same-origin so the
+Content-Security-Policy can stay at `'self'`. No personal data is collected
+or stored, and there is no server-side logging of visitor data.
 
 I care about the security of both the project and the infrastructure it runs
 on, and I welcome reports about anything you find - including issues in the
@@ -27,9 +26,9 @@ disclosure.
 
 ## In scope
 
-- The application code (client-side JS, the Cloudflare Worker in `src/worker.js`).
-- Injection or XSS via URL parameters, the dataset, or the analytics proxy.
-- Security headers and Content-Security-Policy (`public/_headers`).
+- The application code (client-side JS, the Vercel Function in `api/version.mjs`).
+- Injection or XSS via URL parameters or the dataset.
+- Security headers and Content-Security-Policy (`vercel.json`).
 - The build and data pipeline (`scripts/`) - anything that could poison the
   published `localities.json`, `sitemap.xml`, or prerendered pages.
 - Dependency and supply-chain issues (npm packages, GitHub Actions, the Python
@@ -42,7 +41,7 @@ This project depends on external services and infrastructure. If you find a
 problem in how OpenTaxMap uses or configures any of them, I want to know, even
 though the root cause may sit with the provider:
 
-- Cloudflare (Workers, Pages, DNS, Web Analytics, the `nx1xlab.dev` zone).
+- Vercel (hosting, DNS for the `taxmap.nx1xlab.dev` subdomain, Analytics).
 - The basemap and data providers (OpenStreetMap, Israel Hiking Map, CARTO,
   gov.il, CBS).
 - GitHub (repository, Actions, Pages).
