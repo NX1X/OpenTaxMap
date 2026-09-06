@@ -40,11 +40,14 @@ Contributions welcome; see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 - [ ] **PWA / offline** - installable, works offline (the dataset is tiny),
       app icon on mobile.
-- [ ] **GovMap basemap (migration)** - once a domain-bound GovMap API token is
-      granted for `taxmap.nx1xlab.dev`, migrate the map engine from Leaflet to
-      the GovMap JS SDK (OpenLayers-based) to use the official Israeli
-      government basemap. Gated on the token; direct tile embedding is not
-      permitted. Until then the Hebrew basemap is Israel Hiking Map.
+- [ ] **GovMap basemap (migration)** - a domain-bound GovMap API token has
+      been approved for `taxmap.nx1xlab.dev`; the actual integration is
+      scheduled, not yet started. Plan: migrate the map engine from Leaflet
+      to the GovMap JS API to use the official Israeli government basemap.
+      API reference notes: [docs/govmap-api-reference.md](docs/govmap-api-reference.md).
+      The token is domain-bound and will be added directly as a Vercel
+      environment variable when the integration lands, not committed to the
+      repo. Until then the Hebrew basemap is Israel Hiking Map.
 - [ ] **Optional keyed basemap** - a MapTiler/Mapbox layer for fully
       localized labels at every zoom (current free tiles romanize only major
       places in English; Hebrew via OSM is fully local).
@@ -53,8 +56,8 @@ Contributions welcome; see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Infrastructure
 
-- [x] **Deploy via Cloudflare Workers Builds** - the site deploys straight from
-      the repo on push to `main`, with no deploy credentials stored in GitHub.
+- [x] **Deploy via Vercel** - the site deploys straight from the repo on
+      push to `main`, with no deploy credentials stored in GitHub.
 - [ ] Consider a visual-regression check (Playwright screenshots) in CI.
 - [ ] Per-locality dynamic OpenGraph image at build time (see "Per-locality
       share card" above).
