@@ -8,6 +8,23 @@ Hebrew version: [CHANGELOG.he.md](CHANGELOG.he.md).
 
 ## [Unreleased]
 
+### Changed
+
+- Migrated hosting from Cloudflare Workers to Vercel. Response headers,
+  caching, and the SPA fallback rewrite now live in `vercel.json` instead
+  of `wrangler.jsonc` and `public/_headers`
+- `GET /api/version` is now a Vercel Function (`api/version.mjs`) instead
+  of a route inside the Cloudflare Worker
+- Replaced the Cloudflare Web Analytics beacon proxy with Vercel Analytics,
+  served same-origin
+
+### Removed
+
+- `/cf/beacon.js` and `/cf/rum`, the first-party analytics proxy routes,
+  along with the `RUM_LIMITER` rate-limit binding. That was the only
+  unauthenticated write endpoint on the site
+- `wrangler.jsonc`, `src/worker.js`
+
 ## [0.2.3] - 2026-07-26
 
 ### Security

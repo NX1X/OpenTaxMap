@@ -7,12 +7,6 @@ __pycache__/
 .env.*
 !.env.example
 
-# Cloudflare / wrangler
-# .dev.vars holds local secrets in PLAINTEXT - never commit it.
-.dev.vars
-.dev.vars.*
-!.dev.vars.example
-.wrangler/
 
 # Python (the offline data pipeline)
 .venv/

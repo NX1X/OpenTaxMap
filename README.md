@@ -10,7 +10,7 @@
 [![Live site](https://img.shields.io/website?url=https%3A%2F%2Ftaxmap.nx1xlab.dev&label=live)](https://taxmap.nx1xlab.dev)
 <br>
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-[![Deploy: Cloudflare](https://img.shields.io/badge/deploy-Cloudflare-f38020?logo=cloudflare&logoColor=white)](https://taxmap.nx1xlab.dev)
+[![Deploy: Vercel](https://img.shields.io/badge/deploy-Vercel-000000?logo=vercel&logoColor=white)](https://taxmap.nx1xlab.dev)
 [![Last commit](https://img.shields.io/github/last-commit/NX1X/OpenTaxMap)](https://github.com/NX1X/OpenTaxMap/commits/main)
 [![Stars](https://img.shields.io/github/stars/NX1X/OpenTaxMap?style=flat)](https://github.com/NX1X/OpenTaxMap/stargazers)
 [![Views](https://komarev.com/ghpvc/?username=NX1X-OpenTaxMap&label=views&color=0e75b6)](https://github.com/NX1X/OpenTaxMap)
@@ -50,11 +50,12 @@ Live: https://taxmap.nx1xlab.dev
 ![OpenTaxMap architecture](design/architecture.png)
 
 An offline data pipeline turns the Tax Authority booklets into
-`localities.json`, which is committed to the repo. On push to `main`,
-Cloudflare Workers Builds runs the Vite build (with per-locality prerendering)
-and deploys a single Cloudflare Worker that serves the static SPA and proxies
-Web Analytics and the version check first-party. Editable source:
-[design/architecture.drawio](design/architecture.drawio).
+`localities.json`, which is committed to the repo. On push to `main`, Vercel
+runs the Vite build (with per-locality prerendering) and deploys the static
+SPA, with one Vercel Function (`api/version.mjs`) serving the version check.
+Editable source: [design/architecture.drawio](design/architecture.drawio).
+Note: the architecture diagram still shows the former Cloudflare Workers
+deployment and needs a redraw.
 
 ## Data pipeline
 
@@ -104,31 +105,19 @@ CARTO Voyager (English). No backend - the site is fully static.
 
 ## Deployment
 
-The site is fully static, so both Cloudflare targets work. Workers is the
-default here because the first-party analytics proxy (below) needs a small
-Worker script; on Pages the same can be done with a Pages Function.
+The site is fully static and is deployed on Vercel, connected to this repo's
+`main` branch: every push builds and deploys automatically, with a preview
+deployment for each pull request. Build command `npm run build`, output
+directory `dist`. Requires Node 22 (see `.nvmrc`; Vercel reads the pinned
+version from `engines.node` in `package.json` instead).
 
-- **Workers** (configured in `wrangler.jsonc`, uses `src/worker.js`). Deployed
-  by Cloudflare Workers Builds, which pulls this repository and builds on push
-  to `main`; no deploy credentials are stored in GitHub. Manual deploy:
-  `npm run build && npx wrangler deploy`. Requires Node 22 (see `.nvmrc`).
-- **Pages**: build command `npm run build`, output directory `dist`. Without a
-  Function, drop the analytics proxy and use Cloudflare's automatic Web
-  Analytics injection instead.
+Security headers, caching and the SPA routing fallback are configured in
+`vercel.json`.
 
-Security headers and caching are configured in `public/_headers`.
+### Analytics (Vercel Analytics, same-origin)
 
-### Analytics (Cloudflare Web Analytics, first-party)
-
-Privacy-friendly, cookieless, and served first-party so ad/script blockers do
-not strip it and the CSP stays at `'self'`:
-
-1. In the Cloudflare dashboard, add a Web Analytics site and copy its **token**
-   (a public site token, safe to expose).
-2. Build with it set: `CF_ANALYTICS_TOKEN=xxxx npm run build`. The beacon is
-   injected into the HTML pointing at `/cf/beacon.js`; `src/worker.js` proxies
-   both the beacon script and its reporting endpoint (`/cf/rum`) to Cloudflare.
-3. With no token set, nothing is injected. No third-party requests are made.
+Privacy-friendly, cookieless, and served from `/_vercel/insights/script.js`
+so the CSP stays at `'self'` with no third-party origin.
 
 ## Contributing
 
