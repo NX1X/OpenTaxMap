@@ -6,7 +6,7 @@ All notable changes to OpenTaxMap. The format is based on
 
 Hebrew version: [CHANGELOG.he.md](CHANGELOG.he.md).
 
-## [Unreleased]
+## [0.2.4] - 2026-09-06
 
 ### Changed
 
