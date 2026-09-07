@@ -32,7 +32,10 @@ const state = {
   changes: params.get('changes') === '1',
   selected: null,
 }
-if (!STRINGS[state.lang]) state.lang = 'he'
+// Strict allowlist, not a STRINGS[key] lookup: a ?lang=__proto__ (or any
+// other Object.prototype key) would otherwise pass this guard and later
+// blow up at STRINGS[state.lang].aboutDataItems, reflected client-side DoS.
+if (state.lang !== 'he' && state.lang !== 'en') state.lang = 'he'
 
 let t = makeT(state.lang)
 let data = null

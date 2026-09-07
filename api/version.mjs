@@ -15,6 +15,7 @@ export default {
     try {
       const gh = await fetch(RELEASES_API, {
         headers: { 'user-agent': 'opentaxmap', accept: 'application/vnd.github+json' },
+        signal: AbortSignal.timeout(5000),
       })
       if (gh.ok) {
         const data = await gh.json()

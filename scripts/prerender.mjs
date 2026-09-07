@@ -48,6 +48,12 @@ const latestYear = String(Math.max(...data.years))
 let count = 0
 
 for (const loc of data.localities) {
+  // Safe today only because build_data.py collapses slugs to [a-z0-9-]; make
+  // that guarantee local so a future data-pipeline change can't turn
+  // loc.slug into a path-traversal segment for the join() below.
+  if (!/^[a-z0-9][a-z0-9-]*$/.test(loc.slug)) {
+    throw new Error(`unsafe locality slug: ${JSON.stringify(loc.slug)}`)
+  }
   const b = loc.benefits[latestYear]
   const years = Object.keys(loc.benefits).sort()
   const rateText = b
